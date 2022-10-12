@@ -24,7 +24,7 @@ function RestProducts() {
           products.map((product, index)=>{
             return(
               <div key={index} className='col-md-4 box-shadow'>
-                <div className='card mb-4 box-shadow'>
+                <button className='card mb-4 box-shadow'>
                   <div className='card-body'> 
                     <h5 className='mb-1'>{product.name}</h5>
                
@@ -33,7 +33,7 @@ function RestProducts() {
                     <p className='mb-1'>{product.provider}</p>
                     <p className='mb-1'>{product.category}</p>
                   </div>
-                </div>
+                </button>
               </div>
             )
           })

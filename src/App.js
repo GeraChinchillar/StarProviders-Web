@@ -3,6 +3,7 @@ import './components/Api/RestProducts'
 import RestProducts from './components/Api/RestProducts';
 import Header from './components/Api/commons/Header';
 import Footer from './components/Api/commons/Footer';
+import NavBar from './components/Api/commons/NavBar';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         opc2='Boton 2'
         opc3='Boton 3'
       />
+      <NavBar/>
       <RestProducts/>
       <Footer />
     </div>

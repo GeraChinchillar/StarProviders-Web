@@ -1,7 +1,7 @@
 import '../../../App.css';
 
 
-const NavBar = () => {
+const NavBar = ({UserName}) => {
 
     const btn = document.querySelector('#menu-btn');
     const menu = document.querySelector('#sidemenu');
@@ -28,7 +28,7 @@ const NavBar = () => {
             
             <div id='profile'>
                 <div id='photo'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile Picture' width='30px'/></div>
-                <div id='name'><span>Dynamic Name</span></div>
+                <div id='name'><span>{UserName}</span></div>
             </div>
 
             <div id='menu-items'>

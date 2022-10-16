@@ -14,7 +14,9 @@ function App() {
         opc2='Boton 2'
         opc3='Boton 3'
       />
-      <NavBar/>
+      <NavBar 
+        UserName = 'Usuario'
+      />
       <RestProducts/>
       <Footer />
     </div>

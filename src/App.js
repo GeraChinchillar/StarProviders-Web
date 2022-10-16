@@ -1,25 +1,23 @@
-
 import './App.css';
 import './components/Api/RestProducts'
-import React, {useState, useEffect } from 'react';
 import RestProducts from './components/Api/RestProducts';
+import Header from './components/Api/commons/Header';
+import Footer from './components/Api/commons/Footer';
 
 function App() {
-  const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
-  const [products, setProducts] = useState()
+  return (
+    <div>
+      <Header 
+        Name = 'Star Providers'
+        opc1='Boton 1'
+        opc2='Boton 2'
+        opc3='Boton 3'
+      />
+      <RestProducts/>
+      <Footer />
+    </div>
 
-  const fetchApi = ()=> {
-    fetch(urlProducts).then((res)=>(
-      res.json().then((resJson)=>(
-        setProducts(resJson)
-        )
-      )
-    ))
-  }
-  useEffect(()=>{
-    fetchApi()
-  }, []);
-  return (<RestProducts></RestProducts>);
+    );
 }
 
 export default App;

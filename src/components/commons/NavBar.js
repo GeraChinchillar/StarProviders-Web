@@ -25,28 +25,28 @@ const NavBar = () => {
                 </div>        
             
             <div id='profile'>
-                <div id='photo'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile Picture' width='30px'/></div>
+                <div id='photo'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile' width='30px'/></div>
                 <div id='name'><span>Usuario</span></div>
             </div>
 
             <div id='menu-items'>
                 <div className='item'>
                     <a href='#default'>
-                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile Picture'/></div>
+                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile'/></div>
                         <div className='tittle'><span>Proveedores</span> </div>
                     </a>
                 </div>
                 <div className='item separator'> </div>
                 <div className='item'>
                     <a href='#default'>
-                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile Picture'/></div>
+                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile'/></div>
                         <div className='tittle'><span>Productos</span> </div>
                     </a>
                 </div>
                 <div className='item separator'> </div>
                 <div className='item'>
                     <a href='#default'>
-                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile Picture'/></div>
+                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile'/></div>
                         <div className='tittle'><span>Manuales</span> </div>
                     </a>
                 </div>

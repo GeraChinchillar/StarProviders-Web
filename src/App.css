@@ -37,3 +37,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* Class for container */
+/* This class avoid that the products are on top with the header and footer*/
+.container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+

@@ -1,4 +1,4 @@
-import '../../../App.css';
+import '../commons/App.css'
 
 const Header = ({Name, opc1, opc2, opc3}) => {
     return(

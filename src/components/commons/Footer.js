@@ -1,4 +1,4 @@
-import '../../../App.css';
+import '../commons/App.css'
 import { FaLinkedin, FaMailBulk, FaGithub } from 'react-icons/fa';
 
 

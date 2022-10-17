@@ -1,8 +1,8 @@
 import './App.css';
 import RestProducts from './components/Api/RestProducts';
-import Header from './components/Api/commons/Header';
-import Footer from './components/Api/commons/Footer';
-import NavBar from './components/Api/commons/NavBar';
+import Header from './components/commons/Header';
+import Footer from './components/commons/Footer';
+import NavBar from './components/commons/NavBar';
 import Login from './components/Api/Login';
 
 function App() {

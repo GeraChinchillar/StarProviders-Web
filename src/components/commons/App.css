@@ -1,5 +1,6 @@
 /* Classes for Header */
 /* Style the header with a grey background and some padding */
+
 .header {
     overflow: hidden;
     background-color: #FFB690;
@@ -22,6 +23,11 @@
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
+  }
+
+  .header img{
+    float: left;
+    border-radius: 10%;
   }
 
   .logo{
@@ -59,10 +65,10 @@
     }
   }
 
-  .products{
+  /* .products{
     background-color: #FFB690;
     width: 100%;
-  }
+  } */
 
   .oneProduct{
     margin-top: 10px;

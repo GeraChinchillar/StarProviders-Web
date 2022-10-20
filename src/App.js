@@ -20,7 +20,7 @@ function App() {
         opc3='Boton 3'
       />
       <RestProducts/>
-      {/* <Footer /> */}
+      <Footer />
     </div>
 
     );

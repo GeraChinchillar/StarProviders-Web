@@ -18,7 +18,7 @@ function RestProducts() {
     fetchApi()
   }, []);
   return (
-    <div className='container d-flex justify-content-center align-items-center'>
+    <div className='container d-flex justify-content-center align-items-center products'>
       <div className='row'>
         {!products ? 'Cargando...' : 
           products.map((product)=> <Product key={product.code} product={product}/>)

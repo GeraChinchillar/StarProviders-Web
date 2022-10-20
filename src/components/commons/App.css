@@ -58,11 +58,21 @@
       float: none;
     }
   }
+
+  .products{
+    background-color: #FFB690;
+    width: 100%;
+  }
+
+  .oneProduct{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
   /*Classes for footer*/
   .footer-basic {
     padding:40px 0;
-    background-color:#ffffff;
+    background-color: #FFB690;
     color:#4b4c4d;
   }
   

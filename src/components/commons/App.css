@@ -111,7 +111,17 @@ padding-left: 50px;
   left: 300px;
   top:40px
 }
-  
+
+#addForm input{
+text-align: center;
+margin-left: 120px;
+}
+
+#addForm a{
+  text-align: left;
+  margin-left: -450px;
+}
+
   /*Classes for footer*/
   .footer-basic {
     padding:40px 0;

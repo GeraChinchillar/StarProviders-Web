@@ -103,13 +103,21 @@ padding-left: 50px;
 .Agregar{
   text-decoration: none;
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   color: #ffffff;
   background-color: dodgerblue;
-  border-radius: 6px;
+  border-radius: 10px;
   position:absolute;
-  left: 300px;
-  top:40px
+  right: 15px;
+  top:70px
+}
+
+#botoncito{
+  margin-right: 300px;
+  padding: 5px;
+  font-weight: 300;
+  color: black;
+  background-color: greenyellow;
 }
 
 #addForm input{

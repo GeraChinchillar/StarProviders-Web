@@ -76,7 +76,7 @@ function RestProducts() {
                         <br/><br/>
                         <input type="text" placeholder="url" name="URL" id='6d'/>
                         <br/><br/>
-                        <div className="header-right"> <a id = 'botoncito'>Agregar</a></div>
+                        
             </form>
               {/*
               <img src={product.url} width="200px" className='url'/>
@@ -88,6 +88,7 @@ function RestProducts() {
 }
             </Modal.Body>
             <Modal.Footer>
+              <a id = 'botoncito'>Agregar</a>
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>

@@ -3,7 +3,7 @@
 
 .header {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #FFB690;
     padding: 20px 10px;
   }
   
@@ -23,6 +23,12 @@
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
+  }
+
+  .logo{
+    position: relative;
+    left: 95px;
+    font-size: 18px;
   }
   
   /* Change the background color on mouse-over */
@@ -53,11 +59,21 @@
       float: none;
     }
   }
+
+  .products{
+    background-color: #FFB690;
+    width: 100%;
+  }
+
+  .oneProduct{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   
   /*Classes for footer*/
   .footer-basic {
     padding:40px 0;
-    background-color:#ffffff;
+    background-color: #FFB690;
     color:#4b4c4d;
   }
   

@@ -1,6 +1,6 @@
 import '../../../App.css';
 import React, {useState, useEffect } from 'react';
-import { Product } from './Products';
+import { Product } from './Product';
 
 function RestProducts() {
   const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
@@ -18,7 +18,7 @@ function RestProducts() {
     fetchApi()
   }, []);
   return (
-    <div className='container'>
+    <div className='container d-flex justify-content-center align-items-center products'>
       <div className='row'>
         {!products ? 'Cargando...' : 
           products.map((product)=> <Product key={product.code} product={product}/>)

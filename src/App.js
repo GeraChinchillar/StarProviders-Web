@@ -18,9 +18,10 @@ function App() {
       />
       <Header 
         Name = 'Star Providers'
-        opc1='Boton 1'
-        opc2='Boton 2'
-        opc3='Boton 3'
+        opc1='Proveedor'
+        opc2='Producto'
+        opc3='Manual'
+        opc4='Aleatorio'
       />
       <RestProducts/>
       <Footer />

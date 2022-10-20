@@ -3,7 +3,7 @@
 
 .header {
     overflow: hidden;
-    background-color: #FFB690;
+    background-color: #c2b291;
     padding: 20px 10px;
   }
   
@@ -73,12 +73,49 @@
   .oneProduct{
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
+
+  .card-body{
+    min-width: 400px;
+    max-width: 450px;
+    min-height: 400px;
+    max-height: 450px;
+  }
+
+.mb-1{
+  text-align: center;
+}
+
+.url {
+  margin-left: 120px;
+}
+
+.title {
+margin: auto;
+padding-left: 50px;
+
+}
+
+/*Clase boton agregar*/
+
+.Agregar{
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: dodgerblue;
+  border-radius: 6px;
+  position:absolute;
+  left: 300px;
+  top:40px
+}
   
   /*Classes for footer*/
   .footer-basic {
     padding:40px 0;
-    background-color: #FFB690;
+    background-color: #d6e4c3;
     color:#4b4c4d;
   }
   
@@ -307,7 +344,7 @@
   }
   
   .menu-expanded #menu-btn{
-    margin-left: -15px;
+    margin-left: -250px;
   }
   
   .menu-collapsed{
@@ -329,6 +366,12 @@
     width: 100px;
   }
   
+  
+  .menu-collapsed #menu-items{
+    display: none;
+  }
+
+
   
   /*Login CSS*/
   

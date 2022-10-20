@@ -1,6 +1,8 @@
 
 .App {
   text-align: center;
+  background: #FFB690;
+  height: 100vh;
 }
 
 .App-logo {
@@ -40,9 +42,9 @@
 
 /* Class for container */
 /* This class avoid that the products are on top with the header and footer*/
-.container{
+/* .container{
   margin-top: 20px;
   margin-bottom: 20px;
-}
+} */
 
 

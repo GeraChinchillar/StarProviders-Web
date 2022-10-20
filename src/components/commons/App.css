@@ -25,6 +25,11 @@
     font-weight: bold;
   }
 
+  .header img{
+    float: left;
+    border-radius: 10%;
+  }
+
   .logo{
     position: relative;
     left: 95px;
@@ -60,10 +65,10 @@
     }
   }
 
-  .products{
+  /* .products{
     background-color: #FFB690;
     width: 100%;
-  }
+  } */
 
   .oneProduct{
     margin-top: 10px;

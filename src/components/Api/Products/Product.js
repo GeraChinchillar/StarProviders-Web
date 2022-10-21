@@ -19,7 +19,8 @@ export const Product = (props) => {
           <div className='card-body'> 
             <img src={product.url} width="200px"></img>
             <h5 className='card-title'>{product.name}</h5>
-            <p className="card-text">{product.description}</p>
+            <p className="card-text"><b>Precio: </b>${product.price}</p>
+            <p className="card-text"><b>Proveedor: </b>{product.provider}</p>
           </div>
         </button>
 

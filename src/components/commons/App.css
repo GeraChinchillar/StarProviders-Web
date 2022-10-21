@@ -79,8 +79,8 @@
 
   .card-body{
     min-width: 400px;
-    max-width: 450px;
-    min-height: 400px;
+    max-width: 400px;
+    min-height: 450px;
     max-height: 450px;
   }
 

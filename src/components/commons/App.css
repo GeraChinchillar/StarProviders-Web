@@ -130,6 +130,13 @@ margin-left: 120px;
   margin-left: -450px;
 }
 
+/*Clases para el buscador*/
+.buscador{
+  margin: 20px 50px;
+}
+
+
+
   /*Classes for footer*/
   .footer-basic {
     padding:40px 0;

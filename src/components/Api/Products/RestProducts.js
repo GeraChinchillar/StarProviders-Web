@@ -3,6 +3,11 @@ import React, {useState, useEffect } from 'react';
 import { Product } from './Product';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+/**Cosas de busqueda */
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -10,18 +15,15 @@ function RestProducts() {
   const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
   const [products, setProducts] = useState()
 
-  const fetchApi = ()=> {
-    fetch(urlProducts).then((res)=>(
-      res.json().then((resJson)=>(
-        setProducts(resJson)
-        )
-      ) 
-    ))
-  }
-  useEffect(()=>{
-    fetchApi()
-  }, []);
-
+const peticionGet=async()=>{
+  await axios.get(urlProducts)
+  .then(response=>{
+    setProducts(response.data);
+    products(response.data);
+  }).catch(error=>{
+    console.log(error);
+  })
+}
 
 
   //products.push(TST);
@@ -44,59 +46,93 @@ function RestProducts() {
 
       products.push(NewProduct);
 
-  });  }, 1000)
+  });  }, 2000)
 
-  
+  // Buscador
+  const [busqueda, setBusqueda]= useState("");
+  const Buscar=e=>{
+    setBusqueda(e.target.value);
+    filtrar(e.target.value);
+
+    if(e.target.value.length ===0){
+      peticionGet();
+    }
+  }
+
+  const filtrar=(terminoBusqueda)=>{
+      var result = products.filter((elemento)=>{
+        if (elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+          return elemento;
+        }});
+        setProducts(result);
+           
+  };
+
+  useEffect(()=>{
+    peticionGet();
+    },[])
 
   return (
-    <div className='container d-flex justify-content-center align-items-center products'>
-      <div className='row'>
-        {!products ? 'Cargando...' : 
-          products.map((product)=> <Product key={product.code} product={product}/>)
-        }
+    <div>
+      <div className="buscador">
+        <input
+          className="form-control inputBuscar"
+          value= {busqueda}
+          placeholder="Búscar por nombre"
+          onChange={Buscar}
+        />
       </div>
-      <button className='Agregar' onClick={handleShow}>Agregar</button>
-{/*Agregar producto quemado jajaja*/}
-    <div className='modales'>
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title className='title'>Agregar producto</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-            <form id="addForm">
-                        <input type="text" name="name" placeholder="Nombre" id='1d'/>
-                        <br/><br/>
-                        <input type="text" placeholder="description" name="Descripcion" id='2d'/>
-                        <br/><br/>
-                        <input type="text" placeholder="price" name="Precio" id='3d'/>
-                        <br/><br/>
-                        <input type="text" placeholder="provider" name="Proveedor" id='4d'/>
-                        <br/><br/>
-                        <input type="text" placeholder="category" name="Categoria" id='5d'/>
-                        <br/><br/>
-                        <input type="text" placeholder="url" name="URL" id='6d'/>
-                        <br/><br/>
-                        
-            </form>
-              {/*
-              <img src={product.url} width="200px" className='url'/>
-              <p className='mb-1'>{product.description}</p>
-              <p className='mb-1'> <b>Precio:</b> ${product.price}</p>
-              <p className='mb-1'><b>Proveedor: </b>{product.provider}</p>
-              <p className='mb-1'><b>Categoría: </b>{product.category}</p>
-              */
-}
-            </Modal.Body>
-            <Modal.Footer>
-              <a id = 'botoncito'>Agregar</a>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
+
+      
+      <div className='container d-flex justify-content-center align-items-center products'>
+        <div className='row'>
+          {!products ? 'Cargando...' : 
+            products.map((product)=> <Product key={product.code} product={product}/>)
+          }
         </div>
+        <button className='Agregar' onClick={handleShow}>Agregar</button>
+  {/*Agregar producto quemado jajaja*/}
+      <div className='modales'>
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title className='title'>Agregar producto</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+              <form id="addForm">
+                          <input type="text" name="name" placeholder="Nombre" id='1d'/>
+                          <br/><br/>
+                          <input type="text" placeholder="description" name="Descripcion" id='2d'/>
+                          <br/><br/>
+                          <input type="text" placeholder="price" name="Precio" id='3d'/>
+                          <br/><br/>
+                          <input type="text" placeholder="provider" name="Proveedor" id='4d'/>
+                          <br/><br/>
+                          <input type="text" placeholder="category" name="Categoria" id='5d'/>
+                          <br/><br/>
+                          <input type="text" placeholder="url" name="URL" id='6d'/>
+                          <br/><br/>
+                          
+              </form>
+                {/*
+                <img src={product.url} width="200px" className='url'/>
+                <p className='mb-1'>{product.description}</p>
+                <p className='mb-1'> <b>Precio:</b> ${product.price}</p>
+                <p className='mb-1'><b>Proveedor: </b>{product.provider}</p>
+                <p className='mb-1'><b>Categoría: </b>{product.category}</p>
+                */
+  }
+              </Modal.Body>
+              <Modal.Footer>
+                <a id = 'botoncito'>Agregar</a>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
 
 
+      </div>
     </div>
   );
 }

@@ -9,6 +9,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+import LookFor from '../../commons/Buscador'
+
+
 
 
 function RestProducts() {
@@ -25,8 +28,6 @@ const peticionGet=async()=>{
   })
 }
 
-
-  //products.push(TST);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -48,25 +49,7 @@ const peticionGet=async()=>{
 
   });  }, 2000)
 
-  // Buscador
-  const [busqueda, setBusqueda]= useState("");
-  const Buscar=e=>{
-    setBusqueda(e.target.value);
-    filtrar(e.target.value);
 
-    if(e.target.value.length ===0){
-      peticionGet();
-    }
-  }
-
-  const filtrar=(terminoBusqueda)=>{
-      var result = products.filter((elemento)=>{
-        if (elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-          return elemento;
-        }});
-        setProducts(result);
-           
-  };
 
   useEffect(()=>{
     peticionGet();
@@ -74,14 +57,12 @@ const peticionGet=async()=>{
 
   return (
     <div>
-      <div className="buscador">
-        <input
-          className="form-control inputBuscar"
-          value= {busqueda}
-          placeholder="Búscar por nombre"
-          onChange={Buscar}
-        />
-      </div>
+
+      {<LookFor
+      peticionGet1= {peticionGet}
+      products1= {products}
+      setProducts1 = {setProducts}
+      />}
 
       
       <div className='container d-flex justify-content-center align-items-center products'>

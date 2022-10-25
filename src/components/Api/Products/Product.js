@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
+import Modales from "../../commons/Modales";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Modales from '../../commons/Modales'
+
 
 export const Product = (props) => {
     const [isOpen,setIsOpen] = useState(false)
     const {product} = props  
-<<<<<<< Updated upstream
     console.log({product});
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -16,14 +16,6 @@ export const Product = (props) => {
     return(
       <div className='col-md-4 box-shadow oneProduct'>
         <button className='card' variant="primary" onClick={handleShow}>
-=======
-    
-   
-    return(
-      <div className='col-md-4 box-shadow oneProduct'>
-
-        <button className='card' variant="primary" onClick={() => setIsOpen(true)}>
->>>>>>> Stashed changes
           <div className='card-body'> 
             <img src={product.url} width="200px"></img>
             <h5 className='card-title'>{product.name}</h5>
@@ -33,7 +25,6 @@ export const Product = (props) => {
             <p className='card-text'>{product.category}</p>
           </div>
         </button>
-<<<<<<< Updated upstream
         <div>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
@@ -52,18 +43,6 @@ export const Product = (props) => {
               </Button>
             </Modal.Footer>
           </Modal>
-=======
-
-
-        <div className='modales'>
-          <Modales open={isOpen} onClose={() => setIsOpen(false)} title={product.name}>
-            <img src={product.url} width="200px" className='url'/>
-            <p className='mb-1'>{product.description}</p>
-            <p className='mb-1'> <b>Precio:</b> ${product.price}</p>
-            <p className='mb-1'><b>Proveedor: </b>{product.provider}</p>
-            <p className='mb-1'><b>Categoría: </b>{product.category}</p>
-          </Modales>
->>>>>>> Stashed changes
         </div>
       </div>
     )

@@ -66,28 +66,9 @@ const peticionGet=async()=>{
             products.map((product)=> <Product key={product.code} product={product}/>)
           }
         </div>
-        <button className='Agregar' onClick={()=>setIsOpen(true)}>Agregar</button>
+        
   {/*Agregar producto quemado jajaja*/}
-      <div className='modales'>
-            <Modales open={isOpen} onClose={()=> setIsOpen(false)} title={"Add Product"} foot={<Button variant="secondary" onClick={()=> setIsOpen(false)}>Close</Button>}>
-              <form id="addForm">
-                <input type="text" name="name" placeholder="Nombre" id='1d'/>
-                <br/><br/>
-                <input type="text" placeholder="description" name="Descripcion" id='2d'/>
-                <br/><br/>
-                <input type="text" placeholder="price" name="Precio" id='3d'/>
-                <br/><br/>
-                <input type="text" placeholder="provider" name="Proveedor" id='4d'/>
-                <br/><br/>
-                <input type="text" placeholder="category" name="Categoria" id='5d'/>
-                <br/><br/>
-                <input type="text" placeholder="url" name="URL" id='6d'/>
-                <br/><br/>        
-              </form>
-            </Modales>
-          </div>
-
-
+      
       </div>
     </div>
   );

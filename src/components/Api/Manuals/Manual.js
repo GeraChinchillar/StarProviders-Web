@@ -33,7 +33,7 @@ export const Manual = (props) => {
                         </div>
                         <div>
                             <ul>
-                                <h5>Ingredientes</h5>
+                                <h5>Procedimiento</h5>
                                 {manual.steps.map((step) => <li>{step}</li>)}
                             </ul>
                             <ul>

@@ -4,7 +4,7 @@ import ReactDom from 'react-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function Modales({open, children, onClose, title}){
+export default function Modales({open, children, onClose, title, foot}){
   if(!open) return null
   return(
     <>
@@ -16,9 +16,7 @@ export default function Modales({open, children, onClose, title}){
           {children}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={onClose}>
-            Close
-          </Button>
+          {foot}
         </Modal.Footer>
       </Modal>
     </>

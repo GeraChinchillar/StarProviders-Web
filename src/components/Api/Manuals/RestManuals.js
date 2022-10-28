@@ -70,7 +70,6 @@ function RestManuals() {
                     }
                 </div>
             </div>
-            <button className='Agregar' onClick={handleShow}>Agregar</button>
 
             <div className='modales'>
                 <Modal show={show} onHide={handleClose}>

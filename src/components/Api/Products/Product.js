@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import Modales from "../../commons/Modales";
 
 export const Product = (props) => {
     const [isOpen,setIsOpen] = useState(false)

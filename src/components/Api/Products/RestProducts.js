@@ -57,7 +57,6 @@ function RestProducts() {
         setProducts1={setProducts}
       />}
 
-
       <div className='container d-flex justify-content-center align-items-center products'>
         <div className='row'>
           {!products ? 'Cargando...' :

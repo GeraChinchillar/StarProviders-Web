@@ -6,6 +6,7 @@ import Footer from './components/commons/Footer';
 import NavBar from './components/commons/NavBar';
 import Login from './components/Api/Login';
 import Manuals from './components/Api/Manuals/RestManuals';
+import FloatingActionButtons from './components/commons/FlotalanButton';
 
 function App() {
   const OTHER_CONTENT_STYLES = {
@@ -31,7 +32,9 @@ function App() {
         <Route path="/manuals" element={<Manuals />} />
       </Routes>
       <Footer />
+      <FloatingActionButtons/>
     </Router>
+    
 
   );
 }

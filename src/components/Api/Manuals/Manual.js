@@ -11,14 +11,14 @@ export const Manual = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    console.log({ Manual });
     return (
-        <div className='col-md-4 box-shadow oneManual'>
+        <div className='col-md-4 box-shadow oneManual '>
             <button className='card' variant="primary" onClick={handleShow}>
-                <div className='card-body'>
+                <div className='card-body text-center'>
                     <img src={manual.url} width="200px"></img>
-                    <h5 className='card-title'>{manual.name}</h5>
+                    <h4 className='card-title'>{manual.name}</h4>
                     <p className="card-text">{manual.description}</p>
+                    <p className="card-text bottom">{manual.user}</p>
                 </div>
             </button>
             <div>
@@ -27,8 +27,20 @@ export const Manual = (props) => {
                         <Modal.Title>{manual.name}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <img src={manual.url} width="200px"></img>
-                        <p className='mb-1'>{manual.description}</p>
+                        <div className='position-relative'>
+                            <img className='left ' src={manual.url} width="200px"></img>
+                            <p className='relative-f'>{manual.description}</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <h5>Ingredientes</h5>
+                                {manual.steps.map((step) => <li>{step}</li>)}
+                            </ul>
+                            <ul>
+                                <h5>Productos</h5>
+                                {manual.products.map((step) => <li>{step}</li>)}
+                            </ul>
+                        </div>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>

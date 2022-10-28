@@ -70,59 +70,41 @@ function RestManuals() {
                     }
                 </div>
             </div>
+            <button className='Agregar' onClick={handleShow}>Agregar</button>
+
+            <div className='modales'>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title className='title'>Agregar Manual</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <form id="addForm">
+                            <input type="text" name="name" placeholder="Nombre" id='1d' />
+                            <br /><br />
+                            <input type="text" placeholder="description" name="Descripcion" id='2d' />
+                            <br /><br />
+                            <input type="text" placeholder="price" name="Precio" id='3d' />
+                            <br /><br />
+                            <input type="text" placeholder="provider" name="Proveedor" id='4d' />
+                            <br /><br />
+                            <input type="text" placeholder="category" name="Categoria" id='5d' />
+                            <br /><br />
+                            <input type="text" placeholder="url" name="URL" id='6d' />
+                            <br /><br />
+
+                        </form>
+
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <a id='botoncito'>Agregar</a>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+            </div>
+
         </div>
-        // <div>
-
-        //     {<LookFor
-        //         peticionGet1={peticionGet}
-        //         Manuals1={manuals}
-        //         setManuals1={setManuals}
-        //     />}
-
-
-        //     <div className='container d-flex justify-content-center align-items-center Manuals'>
-        //         <div className='row'>
-        //             {!manuals ? 'Cargando...' :
-        //                 manuals.map((Manual) => <Manual key={Manual.code} Manual={Manual} />)
-        //             }
-        //         </div>
-        //         <button className='Agregar' onClick={handleShow}>Agregar</button>
-
-        //         <div className='modales'>
-        //             <Modal show={show} onHide={handleClose}>
-        //                 <Modal.Header closeButton>
-        //                     <Modal.Title className='title'>Agregar Manualo</Modal.Title>
-        //                 </Modal.Header>
-        //                 <Modal.Body>
-        //                     <form id="addForm">
-        //                         <input type="text" name="name" placeholder="Nombre" id='1d' />
-        //                         <br /><br />
-        //                         <input type="text" placeholder="description" name="Descripcion" id='2d' />
-        //                         <br /><br />
-        //                         <input type="text" placeholder="price" name="Precio" id='3d' />
-        //                         <br /><br />
-        //                         <input type="text" placeholder="provider" name="Proveedor" id='4d' />
-        //                         <br /><br />
-        //                         <input type="text" placeholder="category" name="Categoria" id='5d' />
-        //                         <br /><br />
-        //                         <input type="text" placeholder="url" name="URL" id='6d' />
-        //                         <br /><br />
-
-        //                     </form>
-
-        //                 </Modal.Body>
-        //                 <Modal.Footer>
-        //                     <a id='botoncito'>Agregar</a>
-        //                     <Button variant="secondary" onClick={handleClose}>
-        //                         Close
-        //                     </Button>
-        //                 </Modal.Footer>
-        //             </Modal>
-        //         </div>
-
-
-        //     </div>
-        // </div>
     );
 }
 

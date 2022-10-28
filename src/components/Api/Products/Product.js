@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Modales from "../../commons/Modales";
-import Button from 'react-bootstrap/Button';
 
 export const Product = (props) => {
     const [isOpen,setIsOpen] = useState(false)
@@ -29,4 +28,4 @@ export const Product = (props) => {
         </div>
       </div>
     )
-  }
+}

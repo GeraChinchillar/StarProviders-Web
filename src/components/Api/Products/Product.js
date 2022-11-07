@@ -22,7 +22,7 @@ export const Product = (props) => {
         </button>
         <div>
           <Modales open={isOpen} onClose={()=> setIsOpen(false)} title={product.name} foot={<p className='card-text'>${product.price}</p>}>
-            <img src={product.url} width="200px"></img>
+            <img class='card-img' src={product.url}/>
             <p className="card-text">{product.description}</p>
             <p className='card-text'>{product.provider}</p>
             <p className='card-text'>{product.category}</p>

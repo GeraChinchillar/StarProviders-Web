@@ -10,7 +10,7 @@ const NavBar = () => {
             <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon" > </span>
               </button>
-              <a class="navbar-brand" href="#"><img src={star} width='200px'/></a>
+              <a class="navbar-brand" href="#"><img src={star} width='250px'/></a>
               
 
               <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -26,17 +26,20 @@ const NavBar = () => {
                     <li class="nav-item">
                       <a class="nav-link" href="#">Link</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link 2</a>
+                    </li>
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
+                        To Do List
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Thanks for yout support</a></li>
+                        <li><a class="dropdown-item" href="#">This will come in the next update</a></li>
                         <li>
                           <hr class="dropdown-divider" />
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Follow us ;) </a></li>
                       </ul>
                     </li>
                   </ul>

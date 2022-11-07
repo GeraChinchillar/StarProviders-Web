@@ -7,7 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 export default function FloatingActionButtons() {
     const [isOpen,setIsOpen] = useState(false)
     return (
-        <>
+        <div>
             <div>
                 <div class='contenedor' >
                     <button class='botonF1' onClick={()=>setIsOpen(true)}>
@@ -41,7 +41,7 @@ export default function FloatingActionButtons() {
                     </Modal>
             </div>
         </div> 
-      </>
+      </div>
     );
 
 }

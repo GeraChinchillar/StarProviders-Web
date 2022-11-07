@@ -30,13 +30,9 @@ const LookFor = ({peticionGet1, products1, setProducts1}) => {
 
     return (
         <div>
+          <h1 className="TitleProduct">Productos</h1>
           <div className="buscador">
-            <input
-              className="form-control inputBuscar"
-              value= {busqueda}
-              placeholder="Búscar por nombre"
-              onChange={Buscar}
-            />
+            <input className="form-control Search" value= {busqueda} placeholder="Búscar" onChange={Buscar}/>
           </div>
         </div>
       );

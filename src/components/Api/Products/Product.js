@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modales from "../../commons/Modales";
 import Button from 'react-bootstrap/Button';
+import '../../../App.css';
 
 export const Product = (props) => {
     const [isOpen,setIsOpen] = useState(false)
@@ -8,8 +9,8 @@ export const Product = (props) => {
     console.log({product});
 
     return(
-      <div className='col-md-4 box-shadow oneProduct'>
-        <button className='card' class='productbox' variant="primary" onClick={()=>setIsOpen(true)}>
+      <div className='col-md-3 box-shadow oneProduct'>
+        <button className='card' class='productBox'  variant="primary" onClick={()=>setIsOpen(true)}>
           <div className='card-body'> 
             <img src={product.url} width="40%"></img>
             <h6 className='card-title'>{product.name}</h6>

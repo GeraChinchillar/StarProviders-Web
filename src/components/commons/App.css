@@ -79,10 +79,10 @@
   }
 
   .card-body{
-    min-width: 400px;
-    max-width: 400px;
-    min-height: 450px;
-    max-height: 450px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 400px;
+    max-height: 400px;
   }
 
 .mb-1{
@@ -188,6 +188,7 @@ margin-left: 120px;
 .header{
   height: 100px;
   padding: 25px 50px 75px 100px;
+
 }
 
 
@@ -577,3 +578,5 @@ margin-left: 120px;
   .Mostrar {
     display: none;
   }
+
+

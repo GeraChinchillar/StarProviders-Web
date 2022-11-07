@@ -67,7 +67,6 @@ const peticionGet=async()=>{
           }
         </div>
         
-  {/*Agregar producto quemado jajaja*/}
       
       </div>
     </div>

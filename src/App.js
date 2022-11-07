@@ -14,16 +14,7 @@ function App() {
 // <Login/>
   return (
     <div className='App'>
-      <NavBar 
-        UserName = 'Usuario'
-      />
-      <Header 
-        Name = 'Star Providers'
-        opc1='Proveedor'
-        opc2='Producto'
-        opc3='Manual'
-        opc4='Aleatorio'
-      />
+      <NavBar/>
       <RestProducts/>
       <Footer />
       <FloatingActionButtons/>

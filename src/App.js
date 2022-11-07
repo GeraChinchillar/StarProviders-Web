@@ -6,11 +6,7 @@ import Login from './components/Api/Login';
 import FloatingActionButtons from './components/commons/FlotalanButton';
 
 function App() {
-  const OTHER_CONTENT_STYLES = {
-    position: 'relative',
-    zIndex: 2,
-  }
-// <Login/>
+
   return (
     <div className='App'>
       <NavBar/>

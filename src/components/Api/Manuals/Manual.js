@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import '../../../App.css';
 
 
 export const Manual = (props) => {
@@ -12,8 +13,8 @@ export const Manual = (props) => {
     const handleShow = () => setShow(true);
 
     return (
-        <div className='col-md-4 box-shadow oneManual '>
-            <button className='card' variant="primary" onClick={handleShow}>
+        <div className='col-md-3 box-shadow oneManual '>
+            <button className='card' class='productBox' variant="primary" onClick={handleShow}>
                 <div className='card-body text-center'>
                     <img src={manual.url} width="200px"></img>
                     <h4 className='card-title'>{manual.name}</h4>

@@ -77,6 +77,13 @@
     padding-bottom: 20px;
   }
 
+  .oneManual{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .card-body{
     min-width: 400px;
     max-width: 400px;

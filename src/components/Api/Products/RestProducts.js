@@ -1,13 +1,10 @@
 import '../../../App.css';
 import React, { useState, useEffect } from 'react';
 import { Product } from './Product';
-import Modales from "../../commons/Modales";
-import Button from 'react-bootstrap/Button';
 /**Cosas de busqueda */
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 import LookFor from '../../commons/Buscador'
 
@@ -19,10 +16,12 @@ function RestProducts() {
     await axios.get(urlProducts)
       .then(response => {
         setProducts(response.data);
+        products(response.data);
       }).catch(error => {
         console.log(error);
       })
   }
+
 
   setTimeout(() => {
     const btn = document.querySelector('#botoncito');
@@ -57,12 +56,15 @@ function RestProducts() {
         setProducts1={setProducts}
       />}
 
+
       <div className='container d-flex justify-content-center align-items-center products'>
         <div className='row'>
           {!products ? 'Cargando...' :
             products.map((product) => <Product key={product.code} product={product} />)
           }
         </div>
+
+
       </div>
     </div>
   );

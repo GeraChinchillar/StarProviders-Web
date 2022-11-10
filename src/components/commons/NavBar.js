@@ -1,64 +1,46 @@
-import { FaLinkedinIn } from 'react-icons/fa';
 import '../commons/App.css'
+import star from '../../Assets/star.png'
 import { Link } from "react-router-dom"
 
 
 const NavBar = () => {
+  return (
+    <div>
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon" > </span>
+          </button>
+          <a class="navbar-brand" href="#"><img src={star} width='250px' /></a>
 
-    setTimeout(() => {
-        const btn = document.querySelector('#menu-btn');
-        const menu = document.querySelector('#sidemenu');
-        btn.addEventListener('click', e => {
-            menu.classList.toggle('menu-expanded')
-            menu.classList.toggle('menu-collapsed')
 
-            document.querySelector('body').classList.toggle('body-expanded')
-        });
-    }, 2000)
-
-    return (
-        <div className='menu-collapsed' id='sidemenu'>
-            <div id='header'>
-                <div id='menu-btn'>
-                    <div className='btn-hamburger'></div>
-                    <div className='btn-hamburger'></div>
-                    <div className='btn-hamburger'></div>
-                </div>
+          <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close text-reset bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-
-            <div id='profile'>
-                <div id='photo'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile' width='30px' /></div>
-                <div id='name'><span>Usuario</span></div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <Link className="nav-link active" to="/">Home</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/products">Productos</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/manuals">Manuales</Link>
+                </li>
+                <li class="nav-item">
+                  <Link className="nav-link" to="/">Proveedores</Link>
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-            <div id='menu-items'>
-                <div className='item'>
-                    <Link to={"/providers"}>
-                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile' /></div>
-                        <div className='tittle'><span>Proveedores</span> </div>
-                    </Link>
-                </div>
-                <div className='item separator'> </div>
-                <div className='item'>
-                    <Link to="/products">
-                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile' /></div>
-                        <div className='tittle'><span>Productos</span> </div>
-                    </Link>
-                </div>
-                <div className='item separator'> </div>
-                <div className='item'>
-                    <Link to='/manuals'>
-                        <div className='icon'><img src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png' alt='Profile' /></div>
-                        <div className='tittle'><span>Manuales</span> </div>
-                    </Link>
-                </div>
-                <div className='item separator'> </div>
-
-            </div>
-
-        </div >
-
-    );
+  );
 
 }
 export default NavBar;

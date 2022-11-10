@@ -5,9 +5,6 @@ import Button from 'react-bootstrap/Button';
 /**Cosas de busqueda */
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
 import LookFor from '../../commons/Buscador'
 import { Manual } from './Manual';
 

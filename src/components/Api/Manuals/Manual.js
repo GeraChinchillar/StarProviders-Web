@@ -14,10 +14,10 @@ export const Manual = (props) => {
     return (
         <div className='col-md-3 box-shadow oneManual '>
             <button className='card' class='productBox' variant="primary" onClick={handleShow}>
-                <div className='card-body text-center'>
+                <div className='card-body text-center text-wrap'>
                     <img src={manual.url} width="200px"></img>
                     <h4 className='card-title'>{manual.name}</h4>
-                    <p className="card-text">{manual.description}</p>
+                    <p className="card-text ">{manual.description}</p>
                     <p className="card-text bottom">{manual.user}</p>
                 </div>
             </button>

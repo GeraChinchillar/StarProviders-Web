@@ -10,7 +10,7 @@ export const Product = (props) => {
   return (
     <div className='col-md-3 box-shadow oneProduct'>
       <button className='card' class='productBox' variant="primary" onClick={() => setIsOpen(true)}>
-        <div className='card-body'>
+        <div className='card-body text-wrap'>
           <img src={product.url} width="40%"></img>
           <h6 className='card-title'>{product.name}</h6>
           <p className="card-text">{product.description}</p>

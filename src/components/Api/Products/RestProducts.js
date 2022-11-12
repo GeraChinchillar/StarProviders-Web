@@ -57,7 +57,7 @@ function RestProducts() {
       />}
 
 
-      <div className='container d-flex justify-content-center align-items-center products'>
+      <div className='container products'>
         <div className='row'>
           {!products ? 'Cargando...' :
             products.map((product) => <Product key={product.code} product={product} />)

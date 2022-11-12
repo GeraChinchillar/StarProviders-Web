@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../../my-app"
+		},
+		{
+			"path": "../../../../../../react-cards-bootstrap"
+		}
+	],
+	"settings": {}
+}

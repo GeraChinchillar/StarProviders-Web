@@ -9,14 +9,13 @@ export const Product = (props) => {
 
   return (
     <div className='col-md-3 box-shadow oneProduct'>
-      <button className='card' class='productBox' variant="primary" onClick={() => setIsOpen(true)}>
-        <div className='card-body text-center text-wrap'>
-          <img src={product.url} width="40%"></img>
-          <h6 className='card-title'>{product.name}</h6>
-          <p className="card-text">{product.description}</p>
-          <p className='card-text'>${product.price}</p>
-          <p className='card-text'>{product.provider}</p>
-          <p className='card-text'>{product.category}</p>
+      <button className='card' class='colorManual' variant="primary" onClick={() => setIsOpen(true)}>
+        <div className='card-body'>
+          <img src={product.url} className='product-img'></img>
+          <h5 className='card-title-product'>{product.name}</h5>
+          <p className='card-text-product'><b>Proveedor:</b> {product.provider}</p>
+          <p className='card-text-product'><b>Categoria:</b>{product.category}</p>
+          <p className='card-text-precio'> ${product.price}</p>
         </div>
       </button>
       <div>

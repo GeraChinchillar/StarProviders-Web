@@ -1,5 +1,9 @@
 /* Classes for Header */
 
+  .Manuals{
+    align-items: center;
+    margin-left: 12%;
+  }
 
   .oneProduct{
     margin-top: 10px;
@@ -16,11 +20,25 @@
   }
 
   .card-body{
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 400px;
-    max-height: 400px;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 350px;
+    max-height: 350px;
     margin-top: 10px;
+  }
+
+  .card-body-manual{
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 275px;
+    max-height: 275px;
+    margin-top: 10px;
+  }
+
+  .colorManual{
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #000000;
   }
 
 .mb-1{
@@ -82,6 +100,7 @@ margin-left: 120px;
   float: left;
   padding-left: 100px;
   padding-top: 85px;
+  color: black;
 }
 .buscador{
   padding-top: 90px;
@@ -327,14 +346,77 @@ margin-left: 120px;
   }
 
 
-.card-text{
+.card-text-autor{
+  text-align: left;
+  font-size: 13px;
+  margin-left: 10px;
+  color: rgb(120, 120, 120);
+}
+
+.card-title-manual{
+  margin-bottom: 5px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.card-title-product{
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-left: 10px;
   text-align: center;
+}
+
+.card-text-product{
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.product-img{
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 170px;
+  max-height: 170px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.card-text-precio{
+  font-size: 20px;
+  color: rgb(231, 139, 10);
+  margin-top: 20%;
+  margin-right: 13px;
+  text-align: end; 
+}
+
+.manual-img{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-image: 1;
+  border-radius: 8px;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 170px;
+  max-height: 170px;
+  float: left;
+  width:200px
+}
+
+.subtitulos-card-manual{
+  text-align: left;
+  margin-left: 8px;
 }
 
 .card-img{
   max-width: 275px;
   max-height: 275px;
-  
   display:block;
   margin:auto;
+}
+
+.card-text-manual{
+  text-align: left;
+  font-size: 15px;
+  padding-left: 10px;
+  color: rgb(0, 0, 0);
 }

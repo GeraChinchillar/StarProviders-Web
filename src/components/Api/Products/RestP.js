@@ -23,7 +23,7 @@ function RestP() {
     }, [])
 
     return(
-        <div className='slider-card d-flex align-items-center Manuals' >
+        <div className='slider-card d-flex align-items-center' >
             {
                 !products ? 'Cargando...' :
                 products.map((product) =>

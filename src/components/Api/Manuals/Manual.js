@@ -12,13 +12,14 @@ export const Manual = (props) => {
     const handleShow = () => setShow(true);
 
     return (
-        <div className='col-md-3 box-shadow oneManual'>
-            <button className='card' class='productBox' variant="primary" onClick={handleShow}>
-                <div className='card-body text-center text-wrap'>
-                    <img src={manual.url} width="200px"></img>
-                    <h4 className='card-title'>{manual.name}</h4>
-                    <p className="card-text ">{manual.description}</p>
-                    <p className="card-text bottom">{manual.user}</p>
+        <div className='col-md-5 box-shadow oneManual '>
+            <button className='card' class='colorManual' variant="primary" onClick={handleShow}>
+                <div className='card-body-manual text-center text-wrap'>
+                    <h4 className='card-title-manual'>{manual.name}</h4>
+                    <p className="card-text-autor">{manual.user}</p>
+                    <img src={manual.url} className= 'manual-img'></img>
+                    <h5 className='subtitulos-card-manual'>Descripcion</h5>
+                    <p className="card-text-manual">{manual.description}</p>
                 </div>
             </button>
             <div>

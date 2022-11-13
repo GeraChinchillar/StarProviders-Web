@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modales from "../../commons/Modales";
 import '../../../App.css';
 
-export const Product = (props) => {
+export const Providers = (props) => {
   const [isOpen, setIsOpen] = useState(false)
   const { product } = props
   console.log({ product });

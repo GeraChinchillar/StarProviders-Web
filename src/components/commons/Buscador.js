@@ -6,7 +6,7 @@ import '../commons/App.css'
 import React, { useState, useEffect } from 'react';
 
 
-const LookFor = ({ peticionGet1, products1, setProducts1 }) => {
+const LookFor = ({ peticionGet1, products1, setProducts1, Title}) => {
 
   // Buscador
   const [busqueda, setBusqueda] = useState("");
@@ -32,7 +32,7 @@ const LookFor = ({ peticionGet1, products1, setProducts1 }) => {
   return (
     <div>
       {/* Enviar pagina que se esta mostrando por props */}
-      <h1 className="TitleProduct">Productos</h1>
+      {Title}
       <div className="buscador">
         <input className="form-control Search" value={busqueda} placeholder="Búscar" onChange={Buscar} />
       </div>

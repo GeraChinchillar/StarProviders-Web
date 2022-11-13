@@ -7,6 +7,8 @@ import Login from './components/Api/Login';
 import FloatingActionButtons from './components/commons/FlotalanButton';
 import RestManuals from './components/Api/Manuals/RestManuals';
 import Home from './components/commons/Home/Home';
+import Perfil from './components/Api/Perfil/Perfil';
+import RestProviders from './components/Api/Providers/RestProviders';
 
 function App() {
 
@@ -15,9 +17,11 @@ function App() {
       <Router className='App'>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/perfil" element={<Perfil/>} />
+          <Route path="/home" element={<Home/>} />
           <Route path="/products" element={<RestProducts />} />
           <Route path="/manuals" element={<RestManuals />} />
+          <Route path="/providers" element={<RestProviders />} />
         </Routes>
         <Footer />
         <FloatingActionButtons />

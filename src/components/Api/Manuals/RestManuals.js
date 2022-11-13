@@ -58,6 +58,7 @@ function RestManuals() {
                 peticionGet1={peticionGet}
                 Manuals1={manuals}
                 setManuals1={setManuals}
+                Title ={<h1 className="TitleProduct">Manuales</h1>}
             />
             {console.log(manuals)}
             <div className='container d-flex justify-content-center align-items-center Manuals'>

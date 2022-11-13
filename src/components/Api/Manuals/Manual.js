@@ -12,7 +12,7 @@ export const Manual = (props) => {
     const handleShow = () => setShow(true);
 
     return (
-        <div className='col-md-3 box-shadow oneManual '>
+        <div className='col-md-3 box-shadow oneManual'>
             <button className='card' class='productBox' variant="primary" onClick={handleShow}>
                 <div className='card-body text-center text-wrap'>
                     <img src={manual.url} width="200px"></img>

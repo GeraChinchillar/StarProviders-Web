@@ -1,14 +1,12 @@
 import '../../../App.css';
 import React, { useState, useEffect } from 'react';
-import { Product } from './Product';
+import { Providers } from './Providers';
 /**Cosas de busqueda */
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import LookFor from '../../commons/Buscador';
 
-
-import LookFor from '../../commons/Buscador'
-
-function RestProducts() {
+function RestProviders() {
   const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
   const [products, setProducts] = useState()
 
@@ -54,14 +52,14 @@ function RestProducts() {
         peticionGet1={peticionGet}
         products1={products}
         setProducts1={setProducts}
-        Title ={<h1 className="TitleProduct">Productos</h1>}
+        Title ={<h1 className="TitleProduct">Proveedores</h1>}
       />}
 
 
       <div className='container d-flex justify-content-center align-items-center products'>
         <div className='row'>
           {!products ? 'Cargando...' :
-            products.map((product) => <Product key={product.code} product={product} />)
+            products.map((product) => <Providers key={product.code} product={product} />)
           }
         </div>
 
@@ -71,4 +69,4 @@ function RestProducts() {
   );
 }
 
-export default RestProducts;
+export default RestProviders;

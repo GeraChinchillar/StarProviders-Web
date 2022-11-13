@@ -1,7 +1,4 @@
-import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import '../commons/App.css'
 import React, { useState, useEffect } from 'react';
 

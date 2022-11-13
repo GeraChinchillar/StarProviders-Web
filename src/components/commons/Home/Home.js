@@ -1,5 +1,6 @@
 import ManualsSlider from "./ManualsSlider";
 import ProductsSlider from "./ProductsSlider";
+import ProviderSlider from "./ProviderSlider";
 import "./Home.css"
 
 function Home(){
@@ -12,6 +13,10 @@ function Home(){
             <h1 className="TitleProduct">Manuals</h1>
             <div className="home">
                 <ManualsSlider/>
+            </div>
+            <h1 className="TitleProduct">Proveedores</h1>
+            <div className="home">
+                <ProviderSlider/>
             </div>
             
         </div>

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import RestProducts from './components/Api/Products/RestProducts';
 import Footer from './components/commons/Footer';
 import NavBar from './components/commons/NavBar';
-import Login from './components/Api/Login';
+import Login from './components/Api/Login/Login';
 import FloatingActionButtons from './components/commons/FlotalanButton';
 import RestManuals from './components/Api/Manuals/RestManuals';
 import Home from './components/commons/Home/Home';
@@ -17,8 +17,9 @@ function App() {
       <Router className='App'>
         <NavBar />
         <Routes>
+          <Route path="/login" element={<Login/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/perfil" element={<Perfil/>} />
-          <Route path="/home" element={<Home/>} />
           <Route path="/products" element={<RestProducts />} />
           <Route path="/manuals" element={<RestManuals />} />
           <Route path="/providers" element={<RestProviders />} />

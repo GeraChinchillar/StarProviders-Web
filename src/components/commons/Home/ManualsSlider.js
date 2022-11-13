@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css"
 import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
-import RestProducts from "../../Api/Products/RestProducts";
 import RestM from "../../Api/Manuals/RestM";
 
 const ManualsSlider = (props) =>{

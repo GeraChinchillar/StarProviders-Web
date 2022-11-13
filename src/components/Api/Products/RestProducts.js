@@ -4,7 +4,7 @@ import { Product } from './Product';
 /**Cosas de busqueda */
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import FloatingActionButtons from '../../commons/FlotalanButton'
 
 import LookFor from '../../commons/Buscador'
 
@@ -67,6 +67,7 @@ function RestProducts() {
 
 
       </div>
+      <FloatingActionButtons/>
     </div>
   );
 }

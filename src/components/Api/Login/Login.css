@@ -14,3 +14,24 @@
   }
 }
 
+.btn-log{
+  background-color: rgb(227, 118, 62);
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+}
+
+.btn-log:hover{
+  background-color: rgb(255, 98, 0);
+}
+
+.LinkLog{
+  text-decoration: none;
+  color: white;
+}
+
+.linkRegister{
+  color: rgb(227, 118, 62);
+}

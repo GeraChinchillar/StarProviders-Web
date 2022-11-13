@@ -7,6 +7,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LookFor from '../../commons/Buscador'
 import { Manual } from './Manual';
+import FloatingActionButtons from '../../commons/FlotalanButton'
 
 
 
@@ -100,7 +101,7 @@ function RestManuals() {
                     </Modal.Footer>
                 </Modal>
             </div>
-
+            <FloatingActionButtons/>
         </div>
     );
 }

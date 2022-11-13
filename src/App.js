@@ -4,7 +4,6 @@ import RestProducts from './components/Api/Products/RestProducts';
 import Footer from './components/commons/Footer';
 import NavBar from './components/commons/NavBar';
 import Login from './components/Api/Login/Login';
-import FloatingActionButtons from './components/commons/FlotalanButton';
 import RestManuals from './components/Api/Manuals/RestManuals';
 import Home from './components/commons/Home/Home';
 import Perfil from './components/Api/Perfil/Perfil';
@@ -25,7 +24,6 @@ function App() {
           <Route path="/providers" element={<RestProviders />} />
         </Routes>
         <Footer />
-        <FloatingActionButtons />
       </Router>
     </div>
 

@@ -26,7 +26,7 @@ function RestM() {
             {
                 !manuals ? 'Cargando...' :
                 manuals.map((manual) => 
-                    <div className='slider-card'>
+                    <div className='slider-card-manual'>
                         <Manual key={Manual.code} manual={manual} />
                     </div>
                 )

@@ -8,8 +8,8 @@
 
 #main-slider-container{
     width: 90%;
-    height: 490px;
-    background: rgb(229,239,247);
+    height: 420px;
+    background: rgb(230, 230, 230);
     position: relative;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
 }
 
 .slider-icon.left, .slider-icon.right{
-    background: white;
+    background: black;
     border-radius: 100%;
     position: absolute;
     opacity: 0.2;
@@ -45,13 +45,22 @@
 }
 
 .slider-icon.left:hover, .slider-icon.right:hover{
+    background: white;
     opacity: 1;
 }
 
 .slider-card{
     width: 320px;
-    height: 450px;
+    height: 400px;
     border-radius: 10px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.slider-card-manual{
+    width: 520px;
+    height: auto;
     display: inline-block;
     margin-left: 5px;
     margin-right: 5px;

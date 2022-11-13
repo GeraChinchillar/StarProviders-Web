@@ -9,14 +9,13 @@ import Home from './components/commons/Home/Home';
 import Perfil from './components/Api/Perfil/Perfil';
 import RestProviders from './components/Api/Providers/RestProviders';
 
-function App() {
-
+function App(props) {
   return (
-    <div className='App'>
+    <div className='App' id='menu-app'>
       <Router className='App'>
-        <NavBar />
+        <NavBar user = {props.user}/>
         <Routes>
-          <Route path="/login" element={<Login/>} />
+          <Route exact path="/login" element={<Login/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/perfil" element={<Perfil/>} />
           <Route path="/products" element={<RestProducts />} />

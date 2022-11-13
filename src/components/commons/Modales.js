@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
-import { useState } from 'react';
-import ReactDom from 'react-dom';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+
 import Modal from 'react-bootstrap/Modal';
 
 export default function Modales({open, children, onClose, title, foot}){

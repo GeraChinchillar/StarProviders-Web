@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../commons/App.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 
 const LookFor = ({ peticionGet1, products1, setProducts1, Title}) => {
@@ -21,6 +21,7 @@ const LookFor = ({ peticionGet1, products1, setProducts1, Title}) => {
       if (elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())) {
         return elemento;
       }
+      return null
     });
     setProducts1(result);
 

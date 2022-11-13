@@ -8,16 +8,15 @@ function RestM() {
     const urlManuals = 'https://private-894052-starproviders.apiary-mock.com/manuels'
     const [manuals, setManuals] = useState()
 
-    const peticionGet = async () => {
-        await axios.get(urlManuals)
-            .then(response => {
-                setManuals(response.data);
-            }).catch(error => {
-                console.log(error);
-            })
-    }
-
     useEffect(() => {
+        const peticionGet = async () => {
+            await axios.get(urlManuals)
+                .then(response => {
+                    setManuals(response.data);
+                }).catch(error => {
+                    console.log(error);
+                })
+        };
         peticionGet();
     }, [])
 

@@ -4,7 +4,6 @@ import Modal from 'react-bootstrap/Modal';
 
 
 export const Manual = (props) => {
-    const [isOpen, setIsOpen] = useState(false)
     const { manual } = props
     console.log({ Manual });
     const [show, setShow] = useState(false);
@@ -17,7 +16,7 @@ export const Manual = (props) => {
                 <div className='card-body-manual text-center text-wrap'>
                     <h4 className='card-title-manual'>{manual.name}</h4>
                     <p className="card-text-autor">{manual.user}</p>
-                    <img src={manual.url} className= 'manual-img'></img>
+                    <img src={manual.url} className= 'manual-img' alt='manual'></img>
                     <h5 className='subtitulos-card-manual'>Descripcion</h5>
                     <p className="card-text-manual">{manual.description}</p>
                 </div>
@@ -29,7 +28,7 @@ export const Manual = (props) => {
                     </Modal.Header>
                     <Modal.Body>
                         <div className='position-relative'>
-                            <img className='left ' src={manual.url} width="200px"></img>
+                            <img className='left ' src={manual.url} width="200px" alt='manual'></img>
                             <p className='relative-f'>{manual.description}</p>
                         </div>
                         <div>

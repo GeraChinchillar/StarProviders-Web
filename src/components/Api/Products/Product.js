@@ -11,7 +11,7 @@ export const Product = (props) => {
     <div className='col-md-3 box-shadow oneProduct'>
       <button className='card' class='colorManual' variant="primary" onClick={() => setIsOpen(true)}>
         <div className='card-body'>
-          <img src={product.url} className='product-img'></img>
+          <img src={product.url} className='product-img' alt='product'></img>
           <h5 className='card-title-product'>{product.name}</h5>
           <p className='card-text-product'><b>Proveedor:</b> {product.provider}</p>
           <p className='card-text-product'><b>Categoria:</b>{product.category}</p>
@@ -20,7 +20,7 @@ export const Product = (props) => {
       </button>
       <div>
         <Modales open={isOpen} onClose={() => setIsOpen(false)} title={product.name} foot={<p className='card-text'>${product.price}</p>}>
-          <img class='card-img' src={product.url} />
+          <img class='card-img' src={product.url} alt='product' />
           <p className="card-text">{product.description}</p>
           <p className='card-text'>{product.provider}</p>
           <p className='card-text'>{product.category}</p>

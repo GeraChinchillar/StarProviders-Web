@@ -6,20 +6,18 @@ import '../../commons/Home/Home.css'
 
 function RestP() {
     const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
-  const [products, setProducts] = useState()
-
-  const peticionGet = async () => {
-    await axios.get(urlProducts)
-      .then(response => {
-        setProducts(response.data);
-        products(response.data);
-      }).catch(error => {
-        console.log(error);
-      })
-  }
+    const [products, setProducts] = useState()
 
     useEffect(() => {
-        peticionGet();
+      const peticionGet = async () => {
+        await axios.get(urlProducts)
+          .then(response => {
+            setProducts(response.data);
+          }).catch(error => {
+            console.log(error);
+          })
+      };
+      peticionGet();
     }, [])
 
     return(

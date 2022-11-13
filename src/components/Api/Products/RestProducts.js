@@ -16,7 +16,6 @@ function RestProducts() {
     await axios.get(urlProducts)
       .then(response => {
         setProducts(response.data);
-        products(response.data);
       }).catch(error => {
         console.log(error);
       })
@@ -40,8 +39,6 @@ function RestProducts() {
 
     });
   }, 2000)
-
-
 
   useEffect(() => {
     peticionGet();

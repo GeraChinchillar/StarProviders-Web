@@ -21,7 +21,7 @@ const NavBar = (props) => {
             <span class="navbar-toggler-icon" > </span>
           </button>
 
-          <Link  to="/" className='navbar-brand'> <img src={star} width='250px' /></Link>
+          <Link  to="/" className='navbar-brand'> <img src={star} width='250px' alt='star providers logo'/></Link>
 
 
           <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -47,7 +47,7 @@ const NavBar = (props) => {
                   <Link className="nav-link" to="/providers">Proveedores</Link>
                 </li>
                 <li class="nav-item">
-                  <a className="nav-link" href='' onClick={cerrarSesion}>Cerrar Sesion</a>
+                  <a className="nav-link" href='/' onClick={cerrarSesion}>Cerrar Sesion</a>
                 </li>
               </ul>
             </div>

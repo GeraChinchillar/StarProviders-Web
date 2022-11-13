@@ -38,7 +38,7 @@ const Login = () => {
 
                 <div className="text-center text-lg-start mt-4 pt-2">
                     <button className="btn btn-primary btn-lg" href='#default'
-                    >Login</button>
+                    ><Link  to="/"> Login</Link></button>
                     <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#default"
                         className="link-danger">Register</a></p>
                 </div>

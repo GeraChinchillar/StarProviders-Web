@@ -58,15 +58,12 @@ padding-left: 50px;
 /*Clase boton agregar*/
 
 .Agregar{
+  background-color: rgb(227, 118, 62);
   text-decoration: none;
-  padding: 10px;
-  font-size: 15px;
-  color: #ffffff;
-  background-color: dodgerblue;
-  border-radius: 10px;
-  position:absolute;
-  right: 15px;
-  top:70px
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
 }
 
 #botoncito{
@@ -78,8 +75,8 @@ padding-left: 50px;
 }
 
 #addForm input{
-text-align: center;
-margin-left: 120px;
+text-align: left;
+float: right;
 }
 
 #addForm a{
@@ -419,4 +416,35 @@ margin-left: 120px;
   font-size: 15px;
   padding-left: 10px;
   color: rgb(0, 0, 0);
+}
+/*MODALES DE AGREGAR*/
+
+.addManual{
+  color:rgb(0, 0, 0);
+}
+
+/*Modal Producto*/
+
+.modal-product{
+  color: #000000;
+}
+
+.modal-product-title{
+  color: #000000;
+}
+
+.modal-product-precio{
+  font-size: 25px;
+  color: rgba(227, 118, 62, 1);
+}
+
+.modal-product-img{
+  width: 60%;
+  margin-left: 20%;
+}
+
+/*Modal Manual*/
+
+.modal-manual{
+  color: #000000;
 }

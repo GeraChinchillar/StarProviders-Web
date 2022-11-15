@@ -1,16 +1,17 @@
 import '../../../App.css';
 import React, { useState, useEffect } from 'react';
 import { Product } from './Product';
+import Modal from 'react-bootstrap/Modal';
 /**Cosas de busqueda */
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FloatingActionButtons from '../../commons/FlotalanButton'
 
 import LookFor from '../../commons/Buscador'
 
 function RestProducts() {
   const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
   const [products, setProducts] = useState()
+  const [isOpen,setIsOpen] = useState(false)
 
   const peticionGet = async () => {
     await axios.get(urlProducts)
@@ -64,7 +65,29 @@ function RestProducts() {
 
 
       </div>
-      <FloatingActionButtons/>
+      <div class='contenedor' >
+        <button class='botonF1' onClick={()=>setIsOpen(true)}>
+          <span>+</span>
+        </button>
+      </div>
+      <div className='modales'>
+        <Modal className='addManual' show={isOpen} onHide={()=> setIsOpen(false)}>
+            <Modal.Header closeButton>
+                <Modal.Title>Agregar Producto</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <form id="addForm">
+                    <p>Nombre del producto: <input type="text" name="name" placeholder="" id='1d'/></p>
+                    <p>Descripción: <input type="text" name="name" placeholder="" id='1d'/></p>
+                    <p>Precio: <input type="text" name="name" placeholder="" id='1d'/></p>
+                    <p>Categoria: <input type="text" name="name" placeholder="" id='1d'/></p>      
+                </form>
+            </Modal.Body>
+            <Modal.Footer>
+                <button className="Agregar" onClick={()=> setIsOpen(false)}>Agregar</button>
+            </Modal.Footer>
+          </Modal>
+        </div>
     </div>
   );
 }

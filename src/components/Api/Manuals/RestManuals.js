@@ -7,14 +7,11 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LookFor from '../../commons/Buscador'
 import { Manual } from './Manual';
-import FloatingActionButtons from '../../commons/FlotalanButton'
-
-
-
 
 function RestManuals() {
     const urlManuals = 'https://private-894052-starproviders.apiary-mock.com/manuels'
     const [manuals, setManuals] = useState()
+    const [isOpen,setIsOpen] = useState(false)
 
     const peticionGet = async () => {
         await axios.get(urlManuals)
@@ -69,39 +66,33 @@ function RestManuals() {
                 </div>
             </div>
 
-            <div className='modales'>
-                <Modal show={show} onHide={handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title className='title'>Agregar Manual</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <form id="addForm">
-                            <input type="text" name="name" placeholder="Nombre" id='1d' />
-                            <br /><br />
-                            <input type="text" placeholder="description" name="Descripcion" id='2d' />
-                            <br /><br />
-                            <input type="text" placeholder="price" name="Precio" id='3d' />
-                            <br /><br />
-                            <input type="text" placeholder="provider" name="Proveedor" id='4d' />
-                            <br /><br />
-                            <input type="text" placeholder="category" name="Categoria" id='5d' />
-                            <br /><br />
-                            <input type="text" placeholder="url" name="URL" id='6d' />
-                            <br /><br />
-
-                        </form>
-
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <a id='botoncito' href='add buttom'>Agregar</a>
-                        <Button variant="secondary" onClick={handleClose} href='close buttom'>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
+            <div>
+                <div class='contenedor' >
+                    <button class='botonF1' onClick={()=>setIsOpen(true)}>
+                        <span>+</span>
+                    </button>
+                </div>
+                <div className='modales'>
+                    <Modal className='addManual' show={isOpen} onHide={()=> setIsOpen(false)}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Agregar Manual</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <form id="addForm">
+                                <p>Nombre del manual: <input type="text" name="name" placeholder="" id='1d'/></p>
+                                <p>Autor: <input type="text" name="name" placeholder="" id='1d'/></p>
+                                <p>Descripción: <input type="text" name="name" placeholder="" id='1d'/></p>
+                                <p>Productos: <input type="text" name="name" placeholder="" id='1d'/></p>
+                                <p>Categoria: <input type="text" name="name" placeholder="" id='1d'/></p>      
+                            </form>
+                        </Modal.Body>
+                        <Modal.Footer>
+                            <button className="Agregar" onClick={()=> setIsOpen(false)}>Agregar</button>
+                        </Modal.Footer>
+                    </Modal>
             </div>
-            <FloatingActionButtons/>
-        </div>
+        </div>     
+    </div>
     );
 }
 

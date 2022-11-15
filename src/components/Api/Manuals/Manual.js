@@ -22,7 +22,7 @@ export const Manual = (props) => {
                 </div>
             </button>
             <div>
-                <Modal show={show} onHide={handleClose}>
+                <Modal className='modal-manual modal-dialog-centered modal-lg' show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>{manual.name}</Modal.Title>
                     </Modal.Header>
@@ -43,9 +43,9 @@ export const Manual = (props) => {
                         </div>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <button className="Agregar" variant="secondary" onClick={handleClose}>
                             Close
-                        </Button>
+                        </button>
                     </Modal.Footer>
                 </Modal>
             </div>

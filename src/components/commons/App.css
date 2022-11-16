@@ -448,3 +448,28 @@ float: right;
 .modal-manual{
   color: #000000;
 }
+
+.manual-modal-img{
+  width: 50%;
+}
+
+.manual-modal-initial{
+  margin-left: 25%;
+}
+
+.list-manual{
+  padding-left: 30px;
+}
+
+.manual-text-autor{
+  font-size: 13px;
+  margin-left: 10px;
+  text-align: center;
+  color: rgb(120, 120, 120);
+}
+
+.manual-desc{
+  margin-left: 10px;
+}
+
+

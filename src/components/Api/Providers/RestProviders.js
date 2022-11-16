@@ -14,12 +14,10 @@ function RestProviders() {
     await axios.get(urlProducts)
       .then(response => {
         setProducts(response.data);
-        products(response.data);
       }).catch(error => {
         console.log(error);
       })
-  }
-
+  };
 
   setTimeout(() => {
     const btn = document.querySelector('#botoncito');
@@ -38,8 +36,6 @@ function RestProviders() {
 
     });
   }, 2000)
-
-
 
   useEffect(() => {
     peticionGet();

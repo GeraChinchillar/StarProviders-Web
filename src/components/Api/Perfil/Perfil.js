@@ -1,7 +1,4 @@
 import '../Perfil/Perfil.css'
-import { FaLinkedin, FaMailBulk, FaGithub } from 'react-icons/fa';
-import star from '../../../Assets/star.png'
-
 
 function Perfil () {
     return (
@@ -35,7 +32,7 @@ function Perfil () {
                     </div>
                     <div class="col-lg-6">
                         <div class="about-avatar">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class='imgp' title="" alt=""/>
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class='imgp' title="" alt="profile"/>
                         </div>
                     </div>
                 </div>

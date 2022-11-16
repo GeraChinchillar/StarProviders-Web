@@ -27,7 +27,6 @@ function RestManuals() {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     setTimeout(() => {
         const btn = document.querySelector('#botoncito');
@@ -94,8 +93,8 @@ function RestManuals() {
 
                     </Modal.Body>
                     <Modal.Footer>
-                        <a id='botoncito'>Agregar</a>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <a id='botoncito' href='add buttom'>Agregar</a>
+                        <Button variant="secondary" onClick={handleClose} href='close buttom'>
                             Close
                         </Button>
                     </Modal.Footer>

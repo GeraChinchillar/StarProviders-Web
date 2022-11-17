@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import '../Login/Login.css'
 import star from '../../../Assets/Star_Log.png'
-import App from '../../../App';
 
 
-const Login = () => {
+const Register = () => {
     const [miLogin, setLogin, setRegister] = useState(false);
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")
@@ -57,7 +56,7 @@ const Login = () => {
                 <div className="form-outline mb-3">
                     <input type="password" id="form3Example4" className="form-control form-control-lg"
                     placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} required />
-                    <label className="form-label" htmlFor="form3Example4">Password</label>
+                    <label className="form-label" htmlFor="form3Example4">aa</label>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center">
@@ -79,8 +78,6 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user}/>}
-
         </section>        
 
     </div>
@@ -88,4 +85,4 @@ const Login = () => {
   );
 
 }
-export default Login;
+export default Register;

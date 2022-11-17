@@ -83,7 +83,9 @@ function RestManuals() {
                                 <p>Autor: <input type="text" name="name" placeholder="" id='1d'/></p>
                                 <p>Descripción: <input type="text" name="name" placeholder="" id='1d'/></p>
                                 <p>Productos: <input type="text" name="name" placeholder="" id='1d'/></p>
-                                <p>Categoria: <input type="text" name="name" placeholder="" id='1d'/></p>      
+                                <p>Categoria: <input type="text" name="name" placeholder="" id='1d'/></p>    
+                                <label for="formFileDisabled" class="form-label">Subir imagen del manual</label>
+                                <input class="form-control" type="file" id="formFileDisabled" accept="image/png, image/gif, image/jpeg" />  
                             </form>
                         </Modal.Body>
                         <Modal.Footer>

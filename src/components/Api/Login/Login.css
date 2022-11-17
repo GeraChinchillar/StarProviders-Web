@@ -35,3 +35,7 @@
 .linkRegister{
   color: rgb(227, 118, 62);
 }
+
+#SectionRegister{
+  display: none;
+}

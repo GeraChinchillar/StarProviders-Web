@@ -4,7 +4,6 @@ import RestProducts from './components/Api/Products/RestProducts';
 import Footer from './components/commons/Footer';
 import NavBar from './components/commons/NavBar';
 import Login from './components/Api/Login/Login';
-import Register from './components/Api/Login/Register';
 import RestManuals from './components/Api/Manuals/RestManuals';
 import Home from './components/commons/Home/Home';
 import Perfil from './components/Api/Perfil/Perfil';
@@ -16,8 +15,7 @@ function App(props) {
       <Router className='App'>
         <NavBar user = {props.user}/>
         <Routes>
-          <Route exact path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/perfil" element={<Perfil/>} />
           <Route path="/products" element={<RestProducts />} />

@@ -2,11 +2,10 @@ import React, {useState} from 'react';
 import '../Login/Login.css'
 import star from '../../../Assets/Star_Log.png'
 import App from '../../../App';
-import { Link } from "react-router-dom"
 
 
 const Login = () => {
-    const [miLogin, setLogin, setRegister] = useState(false);
+    const [miLogin, setLogin] = useState(false);
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")
 
@@ -52,7 +51,7 @@ const Login = () => {
         if (txtName.length === 0  || txtPass.length === 0 || txtMail.length === 0 || txtPass2.length === 0){
             alert("Falta completar algún campo")
         } else{
-            if(txtPass2 != txtPass){
+            if(txtPass2 !== txtPass){
                 alert("¡Las contraseñas no coinciden!")
             } else {
                 if(txtPass.length < 6){
@@ -102,8 +101,8 @@ const Login = () => {
                 <div className="text-center  mt-4 pt-2">
                     <button className="btn-log" onClick={iniciarSesion}> Login</button>
 
-                    <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a
-                        className="linkRegister" onClick={Registrarse}>Registro</a></p>
+                    <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <p
+                        className="linkRegister" onClick={Registrarse}>Registro</p></p>
                 </div>
 
                 </form>
@@ -157,8 +156,8 @@ const Login = () => {
                 <div className="text-center  mt-4 pt-2">
                     <button className="btn-log" onClick={Validation}> Registrarse</button>
 
-                    <p className="small fw-bold mt-2 pt-1 mb-0">Do you have an account? <a
-                        className="linkRegister" onClick={InitLogin}>Iniciar Sesion</a></p>
+                    <p className="small fw-bold mt-2 pt-1 mb-0">Do you have an account? <p
+                        className="linkRegister" onClick={InitLogin}>Iniciar Sesion</p></p>
                 </div>
 
                 </form>

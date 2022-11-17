@@ -1,7 +1,6 @@
 import '../../../App.css';
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 /**Cosas de busqueda */
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,8 +21,6 @@ function RestManuals() {
             })
     }
 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
 
     setTimeout(() => {
         const btn = document.querySelector('#botoncito');

@@ -15,7 +15,7 @@ function App(props) {
       <Router className='App'>
         <NavBar user = {props.user}/>
         <Routes>
-          <Route exact path="/login" element={<Login/>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/perfil" element={<Perfil/>} />
           <Route path="/products" element={<RestProducts />} />

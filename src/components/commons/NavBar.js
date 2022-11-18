@@ -48,7 +48,7 @@ const NavBar = (props) => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href='/' onClick={cerrarSesion}>Cerrar Sesion</a>
-                </li>
+                </li>              
               </ul>
             </div>
           </div>

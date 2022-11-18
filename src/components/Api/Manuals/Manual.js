@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
 
@@ -22,31 +21,31 @@ export const Manual = (props) => {
                 </div>
             </button>
             <div>
-                <Modal show={show} onHide={handleClose}>
+                <Modal className='modal-manual modal-dialog-centered modal-lg' show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
                         <Modal.Title>{manual.name}</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <div className='position-relative'>
-                            <img className='left ' src={manual.url} width="200px" alt='manual'></img>
-                            <p className='relative-f'>{manual.description}</p>
+                            <di className='manual-modal-initial'>
+                                <img className='manual-modal-img' src={manual.url} width="200px" alt='manual'></img>
+                                <p className='manual-text-autor'><b>Autor: </b>{manual.user}</p>
+                            </di>
                         </div>
-                        <div>
+                        <div >
+                            <p className='manual-desc'>{manual.description}</p>
                             <ul>
                                 <h5>Procedimiento</h5>
-                                {manual.steps.map((step) => <li>{step}</li>)}
+                                <p className='list-manual'>{manual.steps.map((step) => <li>{step}</li>)}</p>
+                                
                             </ul>
                             <ul>
                                 <h5>Productos</h5>
-                                {manual.products.map((step) => <li>{step}</li>)}
+                                <p className='list-manual'>{manual.products.map((step) => <li >{step}</li>)}</p>
+                                
                             </ul>
                         </div>
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
                 </Modal>
             </div>
         </div>

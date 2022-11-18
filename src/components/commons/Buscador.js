@@ -13,7 +13,8 @@ const LookFor = ({ peticionGet1, products1, setProducts1, Title}) => {
 
     if (e.target.value.length === 0) {
       peticionGet1();
-    }
+    } 
+
   }
 
   const filtrar = (terminoBusqueda) => {
@@ -21,6 +22,7 @@ const LookFor = ({ peticionGet1, products1, setProducts1, Title}) => {
       if (elemento.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())) {
         return elemento;
       }
+
       return null
     });
     setProducts1(result);

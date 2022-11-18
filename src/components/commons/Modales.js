@@ -6,7 +6,7 @@ export default function Modales({open, children, onClose, title, foot}){
   if(!open) return null
   return(
     <>
-      <Modal show={open} onHide={onClose}>
+      <Modal className='modal-product' show={open} onHide={onClose}>
         <Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>

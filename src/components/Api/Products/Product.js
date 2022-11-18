@@ -19,11 +19,11 @@ export const Product = (props) => {
         </div>
       </button>
       <div>
-        <Modales open={isOpen} onClose={() => setIsOpen(false)} title={product.name} foot={<p className='card-text'>${product.price}</p>}>
-          <img class='card-img' src={product.url} alt='product' />
-          <p className="card-text">{product.description}</p>
-          <p className='card-text'>{product.provider}</p>
-          <p className='card-text'>{product.category}</p>
+        <Modales className='modal-product' open={isOpen} onClose={() => setIsOpen(false)} title={product.name} foot={<p className='modal-product-precio'><b>${product.price}</b></p>}>
+          <img class='modal-product-img' src={product.url} alt='product' />
+          <p className='modal-product-text'> <b>Descripción:</b> {product.description}</p>
+          <p className='modal-product-text'> <b>Proveedor:</b> {product.provider}</p>
+          <p className='modal-product-text'> <b>Categoria:</b> {product.category}</p>
         </Modales>
       </div>
     </div>

@@ -61,6 +61,13 @@
   margin-top:65px;
 }
 
+.provider-img{
+  background: blue;
+}
+
+.provider-link{
+  text-decoration: none;
+}
 span{
   transition:.5s;  
 }

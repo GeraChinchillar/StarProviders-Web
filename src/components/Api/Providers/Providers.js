@@ -11,19 +11,17 @@ export const Providers = (props) => {
     <div className='col-md-3 box-shadow oneProduct'>
       <button className='colorManual' variant="primary" onClick={() => setIsOpen(true)}>
       <div className='card-body'>
-          <img src={provider.url} className='product-img' alt='product'></img>
+          <img src={provider.urlLogo} className='provider-img' alt='product'></img>
           <h4 className='card-title-product'>{provider.name}</h4>
-          <p className='card-text-product'><b>Proveedor:</b> {provider.provider}</p>
-          <p className='card-text-product'><b>Categoria:</b>{provider.category}</p>
-          <p className='card-text-precio'> ${provider.price}</p>
+          <p className='card-text-product'><b>Ubicación:</b> {provider.cityName}</p>
         </div>
       </button>
       <div>
-        <Modales open={isOpen} onClose={() => setIsOpen(false)} title={provider.name} foot={<p className='card-text'>${provider.price}</p>}>
-          <img className='card-img' src={provider.url} alt='providers'/>
-          <p className="card-text">{provider.description}</p>
-          <p className='card-text'>{provider.provider}</p>
-          <p className='card-text'>{provider.category}</p>
+        <Modales open={isOpen} onClose={() => setIsOpen(false)} title={provider.name}>
+          <img className='card-img provider-img' src={provider.urlLogo} alt='providers'/>
+          <a href={provider.site} target="_blank" className='provider-link'>Página de Walmart</a>
+          <a href={provider.urlLocation} target="_blank" className='provider-link'>Ubicación</a>
+          <p className='card-text-product'><b>Ubicación:</b> {provider.cityName}</p>
         </Modales>
       </div>
     </div>

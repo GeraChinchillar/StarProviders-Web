@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LookFor from '../../commons/Buscador';
 
 function RestProviders() {
-  const urlProviders = 'https://private-894052-starproviders.apiary-mock.com/products'
+  const urlProviders = 'https://startproviders.uc.r.appspot.com/api/providers'
   const [providers, setProviders] = useState()
 
   const peticionGet = async () => {
@@ -23,16 +23,16 @@ function RestProviders() {
     const btn = document.querySelector('#botoncito');
     btn.addEventListener('click', e => {
 
-      var NewProvider = {
-        name: document.getElementById("1d").value,
-        description: document.getElementById("2d").value,
-        price: document.getElementById("3d").value,
-        provider: document.getElementById("4d").value,
-        category: document.getElementById("5d").value,
-        url: document.getElementById("6d").value
-      };
+      // var NewProvider = {
+      //   name: document.getElementById("1d").value,
+      //   description: document.getElementById("2d").value,
+      //   price: document.getElementById("3d").value,
+      //   provider: document.getElementById("4d").value,
+      //   category: document.getElementById("5d").value,
+      //   url: document.getElementById("6d").value
+      // };
 
-      providers.push(NewProvider);
+      // providers.push(NewProvider);
 
     });
   }, 2000)
@@ -58,8 +58,6 @@ function RestProviders() {
             providers.map((provider) => <Providers key={provider.code} provider={provider} />)
           }
         </div>
-
-
       </div>
     </div>
   );

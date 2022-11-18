@@ -7,13 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LookFor from '../../commons/Buscador';
 
 function RestProviders() {
-  const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
-  const [products, setProducts] = useState()
+  const urlProviders = 'https://private-894052-starproviders.apiary-mock.com/products'
+  const [providers, setProviders] = useState()
 
   const peticionGet = async () => {
-    await axios.get(urlProducts)
+    await axios.get(urlProviders)
       .then(response => {
-        setProducts(response.data);
+        setProviders(response.data);
       }).catch(error => {
         console.log(error);
       })
@@ -23,7 +23,7 @@ function RestProviders() {
     const btn = document.querySelector('#botoncito');
     btn.addEventListener('click', e => {
 
-      var NewProduct = {
+      var NewProvider = {
         name: document.getElementById("1d").value,
         description: document.getElementById("2d").value,
         price: document.getElementById("3d").value,
@@ -32,7 +32,7 @@ function RestProviders() {
         url: document.getElementById("6d").value
       };
 
-      products.push(NewProduct);
+      providers.push(NewProvider);
 
     });
   }, 2000)
@@ -46,16 +46,16 @@ function RestProviders() {
 
       {<LookFor
         peticionGet1={peticionGet}
-        products1={products}
-        setProducts1={setProducts}
-        Title ={<h1 className="TitleProduct">Proveedores</h1>}
+        providers1={providers}
+        setProviders1={setProviders}
+        Title ={<h1 className="TitleProvider">Proveedores</h1>}
       />}
 
 
-      <div className='container d-flex justify-content-center align-items-center products'>
+      <div className='container d-flex justify-content-center align-items-center providers'>
         <div className='row'>
-          {!products ? 'Cargando...' :
-            products.map((product) => <Providers key={product.code} product={product} />)
+          {!providers ? 'Cargando...' :
+            providers.map((provider) => <Providers key={provider.code} provider={provider} />)
           }
         </div>
 

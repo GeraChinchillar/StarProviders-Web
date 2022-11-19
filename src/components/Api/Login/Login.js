@@ -100,9 +100,11 @@ const Login = () => {
 
                 <div className="text-center  mt-4 pt-2">
                     <button className="btn-log" onClick={iniciarSesion}> Login</button>
-
-                    <p className="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <p
-                        className="linkRegister" onClick={Registrarse}>Registro</p></p>
+                    <div class="d-inline p-2">
+                        <p className="small fw-bold mt-2 pt-1 mb-0">¿No tienes una cuenta? 
+                        <p className="linkRegister" onClick={Registrarse}>Registro</p></p>
+                    </div>
+                    
                 </div>
 
                 </form>
@@ -156,7 +158,7 @@ const Login = () => {
                 <div className="text-center  mt-4 pt-2">
                     <button className="btn-log" onClick={Validation}> Registrarse</button>
 
-                    <p className="small fw-bold mt-2 pt-1 mb-0">Do you have an account? <p
+                    <p className="small fw-bold mt-2 pt-1 mb-0">¿Tienes una cuenta?<p
                         className="linkRegister" onClick={InitLogin}>Iniciar Sesion</p></p>
                 </div>
 

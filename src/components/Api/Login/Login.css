@@ -34,6 +34,12 @@
 
 .linkRegister{
   color: rgb(227, 118, 62);
+  cursor: pointer;
+}
+
+.linkRegister:hover{
+  color: rgb(255, 98, 0);
+  text-decoration: underline;
 }
 
 #SectionRegister{

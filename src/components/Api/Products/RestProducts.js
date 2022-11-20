@@ -82,8 +82,7 @@ function RestProducts() {
                     <p>Descripción: <input type="text" name="name" placeholder="" id='1d'/></p>
                     <p>Precio: <input type="text" name="name" placeholder="" id='1d'/></p>
                     <p>Categoria: <input type="text" name="name" placeholder="" id='1d'/></p>      
-                    <label for="formFileDisabled" class="form-label">Subir imagen del producto</label>
-                    <input class="form-control" type="file" id="formFileDisabled" accept="image/png, image/gif, image/jpeg" />
+                    <p>URL imagen: <input type="text" name="name" placeholder="" id='1d'/></p> 
                 </form>
             </Modal.Body>
             <Modal.Footer>

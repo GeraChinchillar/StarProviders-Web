@@ -37,6 +37,7 @@ function RestProducts() {
       };
 
       products.push(NewProduct);
+      
 
     });
   }, 2000)

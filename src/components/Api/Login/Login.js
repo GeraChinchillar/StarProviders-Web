@@ -5,6 +5,7 @@ import App from '../../../App';
 
 
 const Login = () => {
+    const linknewuser = ''
     const [miLogin, setLogin] = useState(false);
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")
@@ -76,7 +77,9 @@ const Login = () => {
                 <img src={star} className="img-fluid"
                 alt="star providers logo"/>
             </div>
-            <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1 register-formulario">
+
+                <h1 className='inicio-sesio-text'>Iniciar Sesión </h1>
                 <form>
 
 
@@ -90,12 +93,6 @@ const Login = () => {
                     <input type="password" id="form3Example4" className="form-control form-control-lg"
                     placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} required />
                     <label className="form-label" htmlFor="form3Example4">Password</label>
-                </div>
-
-                <div className="d-flex justify-content-between align-items-center">
-                    <div className="form-check mb-0">
-
-                    </div>
                 </div>
 
                 <div className="text-center  mt-4 pt-2">
@@ -112,7 +109,7 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user} providerId={4}/>}
+        { miLogin === true && <App user={user}/>}
 
         </section>        
         <section className="vh-100" id='SectionRegister'>
@@ -122,37 +119,50 @@ const Login = () => {
                 <img src={star} className="img-fluid"
                 alt="star providers logo"/>
             </div>
-            <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                <form>
+            <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1 register-formulario2">
+                <h1 className='inicio-sesio-text'>Crear Proveedor </h1>
+                <form className=''>
 
-                <div className="form-outline mb-4">
-                    <input type="text" id="form3Example3_register" className="form-control form-control-lg"
+                <div className="form-outline">
+                    <input type="text" id="form3Example3_register" className="form-control form-control-lg-sm. form-reg"
                     placeholder="Enter your name" onChange={(e)=>setUser(e.target.value)} required/>
-                    <label className="form-label" htmlFor="form3Example3_register">Name</label>
+                    <label className="form-label " htmlFor="form3Example3_register">Name</label>
                 </div>
 
-                <div className="form-outline mb-4">
-                    <input type="email" id="form3Example4_register" className="form-control form-control-lg"
+                <div className="form-outline">
+                    <input type="email" id="form3Example4_register" className="form-control form-control-lg-sm. form-reg"
                     placeholder="Enter email address" onChange={(e)=>setUser(e.target.value)} required/>
                     <label className="form-label" htmlFor="form3Example4_register">Email address</label>
                 </div>
 
-                <div className="form-outline mb-3">
-                    <input type="password" id="form3Example5_register" className="form-control form-control-lg"
+                <div className="form-outline">
+                    <input type="password" id="form3Example5_register" className="form-control form-control-lg-sm. form-reg"
                     placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} required />
                     <label className="form-label" htmlFor="form3Example5_register">Password</label>
                 </div>
 
-                <div className="form-outline mb-3">
-                    <input type="password" id="form3Example6_register" className="form-control form-control-lg"
+                <div className="form-outline">
+                    <input type="password" id="form3Example6_register" className="form-control form-control-lg-sm. form-reg"
                     placeholder="Repeat password" onChange={(e)=>setPass(e.target.value)} required />
                     <label className="form-label" htmlFor="form3Example6_register">Repeat Password</label>
                 </div>
 
-                <div className="d-flex justify-content-between align-items-center">
-                    <div className="form-check mb-0">
+                <div className="form-outline">
+                    <input type="text" id="form3Example7_register" className="form-control form-control-lg-sm. form-reg"
+                    placeholder="URL" onChange={(e)=>setPass(e.target.value)} required />
+                    <label className="form-label" htmlFor="form3Example6_register">URL de imagen de perfil</label>
+                </div>
 
-                    </div>
+                <div className="form-outline">
+                    <input type="text" id="form3Example8_register" className="form-control form-control-lg-sm. form-reg"
+                    placeholder="Ubicación" onChange={(e)=>setPass(e.target.value)} required />
+                    <label className="form-label" htmlFor="form3Example6_register">Ubicación</label>
+                </div>
+
+                <div className="form-outline">
+                    <input type="text" id="form3Example8_register" className="form-control form-control-lg-sm. form-reg"
+                    placeholder="Telefono" onChange={(e)=>setPass(e.target.value)} required />
+                    <label className="form-label" htmlFor="form3Example6_register">Telefono</label>
                 </div>
 
                 <div className="text-center  mt-4 pt-2">
@@ -167,7 +177,7 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user} providerId={4}/>}
+        { miLogin === true && <App user={user}/>}
 
         </section>
     </div>

@@ -45,3 +45,22 @@
 #SectionRegister{
   display: none;
 }
+.form-outline .mb-4{
+  margin-bottom: 5px;
+}
+
+.register-formulario{
+  margin-top: 80px;
+}
+
+.register-formulario2{
+  margin-top: 50px;
+}
+
+
+.inicio-sesio-text{
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  color:black;
+}

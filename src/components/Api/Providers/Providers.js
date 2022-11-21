@@ -19,8 +19,8 @@ export const Providers = (props) => {
       <div>
         <Modales open={isOpen} onClose={() => setIsOpen(false)} title={provider.name}>
           <img className='card-img provider-img' src={provider.urlLogo} alt='providers'/>
-          <a href={provider.site} target="_blank" className='provider-link'>Página de Walmart</a>
-          <a href={provider.urlLocation} target="_blank" className='provider-link'>Ubicación</a>
+          <a href={provider.site} className='provider-link'>Página de Walmart</a>
+          <a href={provider.urlLocation} className='provider-link'>Ubicación</a>
           <p className='card-text-product'><b>Ubicación:</b> {provider.cityName}</p>
         </Modales>
       </div>

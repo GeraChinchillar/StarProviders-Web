@@ -5,7 +5,7 @@ import App from '../../../App';
 
 
 const Login = () => {
-    const linknewuser = ''
+        
     const [miLogin, setLogin] = useState(false);
     const [user, setUser] = useState("")
     const [pass, setPass] = useState("")

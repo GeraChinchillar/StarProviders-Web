@@ -48,8 +48,11 @@ function RestManuals(props) {
 
     const handleSubmit = (event)=>{
         event.preventDefault()
-        if(newManual.name === "" || newManual.description === "" || newManual.price === "" || newManual.urlImage === "" || newManual.categoryName === ""){
-          alert("Faltan campos por llenar")
+        if(newManual.name === "" || newManual.description === "" || 
+            newManual.products === ""|| newManual.steps === "" || 
+            newManual.urlImage === "" || newManual.categoryName === "" || 
+            newManual.materials.length === 0 || newManual.step.length === 0){
+            alert("Faltan campos por llenar")
         }
         else{
           setIsOpen(false);
@@ -81,16 +84,20 @@ function RestManuals(props) {
 
     const handleAddStep = (event) =>{
         event.preventDefault()
-        newManual.step.push(step)
-        setStep("")
-        document.getElementById("input-step").value = "";
+        if(step !== ""){
+            newManual.step.push(step)
+            setStep("")
+            document.getElementById("input-step").value = "";
+        }
     }
 
     const handleAddProduct = (event) =>{
         event.preventDefault()
-        newManual.materials.push(step)
-        setStep("")
-        document.getElementById("product-select").value = "";
+        if (step !== ""){
+            newManual.materials.push(step)
+            setStep("")
+            document.getElementById("product-select").value = "";
+        }
     }
   
     const setManualId = () => {
@@ -139,7 +146,7 @@ function RestManuals(props) {
                                 <p>Descripción: <input type="text" onChange={handleInputChange} name="description" placeholder="" id='1d'/></p>
                                 <div className='steps'>
                                     <p>Productos:</p>
-                                        <select id="product-select" className='select-item input-step' onChange={handleInputStep} name="categoryName">   
+                                        <select id="product-select" className='select-item input-step' onChange={handleInputStep} name="porduct">   
                                             <option value=""></option>
                                             {!products ? 'Cargando...' :products.map(product => <option key={product.id} value={product.name}>{product.name}</option>)}
                                         </select>
@@ -154,7 +161,7 @@ function RestManuals(props) {
                                     <button className="btn-step" onClick={handleAddStep}>Añadir</button>
                                 </div>
                                 <ul>
-                                    {newManual.step.map(oneStep => <li>{oneStep}</li>)}
+                                    {newManual.step.map(oneStep => <li key={oneStep}>{oneStep}</li>)}
                                 </ul>
                                 <p>Categoria: 
                                     <select id="4d" className='select-item' onChange={handleInputChange} name="categoryName">

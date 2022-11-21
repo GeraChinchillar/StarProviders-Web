@@ -5,7 +5,7 @@ import '../../../App.css';
 import '../../commons/Home/Home.css'
 
 function RestP() {
-    const urlProducts = 'https://private-894052-starproviders.apiary-mock.com/products'
+    const urlProducts = 'https://startproviders.uc.r.appspot.com/api/products'
     const [products, setProducts] = useState()
 
     useEffect(() => {
@@ -26,7 +26,7 @@ function RestP() {
                 !products ? 'Cargando...' :
                 products.map((product) =>
                     <div className='slider-card'>
-                        <Product key={product.code} product={product} />
+                        <Product key={product.id} product={product} />
                     </div>
                 )
             }

@@ -24,9 +24,9 @@ function RestPV() {
         <div className='slider-card d-flex align-items-center'>
           {
             !providers ? 'Cargando...' :
-            providers.map((provider) => 
-            <div className='slider-card'>
-                <Providers key={provider.code} provider={provider} />
+            providers.map((provider) =>     
+            <div className='slider-card' key={provider.id}>
+                <Providers provider={provider} />
             </div>
             )
           }

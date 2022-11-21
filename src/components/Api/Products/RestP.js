@@ -5,19 +5,12 @@ import '../../../App.css';
 import '../../commons/Home/Home.css'
 
 function RestP() {
-    const urlProducts = 'https://startproviders.uc.r.appspot.com/api/products'
     const [products, setProducts] = useState()
 
     useEffect(() => {
-      const peticionGet = async () => {
-        await axios.get(urlProducts)
-          .then(response => {
-            setProducts(response.data);
-          }).catch(error => {
-            console.log(error);
-          })
-      };
-      peticionGet();
+      getProducts().then(response => {
+        setProducts(response.data)
+      })
     }, [])
 
     return(
@@ -25,12 +18,26 @@ function RestP() {
             {
                 !products ? 'Cargando...' :
                 products.map((product) =>
-                    <div className='slider-card'>
-                        <Product key={product.id} product={product} />
+                    <div className='slider-card' key={product.id}>
+                        <Product product={product} />
                     </div>
                 )
             }
         </div>
     )
 }
+
+export async function getProducts() {
+  try{
+      
+      const url = 'https://startproviders.uc.r.appspot.com/api/products'
+
+      const response = await axios.get(url);
+      return response
+  }
+  catch(e){
+      console.log(e)
+  }
+}
+
 export default RestP;

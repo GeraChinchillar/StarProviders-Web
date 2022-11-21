@@ -19,24 +19,6 @@ function RestProviders() {
       })
   };
 
-  setTimeout(() => {
-    const btn = document.querySelector('#botoncito');
-    btn.addEventListener('click', e => {
-
-      // var NewProvider = {
-      //   name: document.getElementById("1d").value,
-      //   description: document.getElementById("2d").value,
-      //   price: document.getElementById("3d").value,
-      //   provider: document.getElementById("4d").value,
-      //   category: document.getElementById("5d").value,
-      //   url: document.getElementById("6d").value
-      // };
-
-      // providers.push(NewProvider);
-
-    });
-  }, 2000)
-
   useEffect(() => {
     peticionGet();
   }, [])
@@ -55,7 +37,7 @@ function RestProviders() {
       <div className='container d-flex justify-content-center align-items-center providers'>
         <div className='row'>
           {!providers ? 'Cargando...' :
-            providers.map((provider) => <Providers key={provider.code} provider={provider} />)
+            providers.map((provider) => <Providers key={provider.id} provider={provider} />)
           }
         </div>
       </div>

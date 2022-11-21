@@ -82,13 +82,13 @@ const Login = () => {
 
                 <div className="form-outline mb-4">
                     <input type="email" id="form3Example3" className="form-control form-control-lg"
-                    placeholder="Enter email address" onChange={(e)=>setUser(e.target.value)} required/>
+                    placeholder="Enter email address" onChange={(e)=>setUser(e.target.value)}/>
                     <label className="form-label" htmlFor="form3Example3">Email address</label>
                 </div>
 
                 <div className="form-outline mb-3">
                     <input type="password" id="form3Example4" className="form-control form-control-lg"
-                    placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} required />
+                    placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} />
                     <label className="form-label" htmlFor="form3Example4">Password</label>
                 </div>
 
@@ -100,9 +100,9 @@ const Login = () => {
 
                 <div className="text-center  mt-4 pt-2">
                     <button className="btn-log" onClick={iniciarSesion}> Login</button>
-                    <div class="d-inline p-2">
-                        <p className="small fw-bold mt-2 pt-1 mb-0">¿No tienes una cuenta? 
-                        <p className="linkRegister" onClick={Registrarse}>Registro</p></p>
+                    <div className="d-inline p-2">
+                        <p className="small fw-bold mt-2 pt-1 mb-0">¿No tienes una cuenta? </p>
+                        <p className="linkRegister" onClick={Registrarse}>Registro</p>
                     </div>
                     
                 </div>
@@ -112,7 +112,7 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user} providerId={4}/>}
+        { miLogin === true && <App user={user} providerId={4} userId={2}/>}
 
         </section>        
         <section className="vh-100" id='SectionRegister'>
@@ -127,25 +127,25 @@ const Login = () => {
 
                 <div className="form-outline mb-4">
                     <input type="text" id="form3Example3_register" className="form-control form-control-lg"
-                    placeholder="Enter your name" onChange={(e)=>setUser(e.target.value)} required/>
+                    placeholder="Enter your name" onChange={(e)=>setUser(e.target.value)}/>
                     <label className="form-label" htmlFor="form3Example3_register">Name</label>
                 </div>
 
                 <div className="form-outline mb-4">
                     <input type="email" id="form3Example4_register" className="form-control form-control-lg"
-                    placeholder="Enter email address" onChange={(e)=>setUser(e.target.value)} required/>
+                    placeholder="Enter email address" onChange={(e)=>setUser(e.target.value)}/>
                     <label className="form-label" htmlFor="form3Example4_register">Email address</label>
                 </div>
 
                 <div className="form-outline mb-3">
                     <input type="password" id="form3Example5_register" className="form-control form-control-lg"
-                    placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} required />
+                    placeholder="Enter password" onChange={(e)=>setPass(e.target.value)} />
                     <label className="form-label" htmlFor="form3Example5_register">Password</label>
                 </div>
 
                 <div className="form-outline mb-3">
                     <input type="password" id="form3Example6_register" className="form-control form-control-lg"
-                    placeholder="Repeat password" onChange={(e)=>setPass(e.target.value)} required />
+                    placeholder="Repeat password" onChange={(e)=>setPass(e.target.value)}  />
                     <label className="form-label" htmlFor="form3Example6_register">Repeat Password</label>
                 </div>
 
@@ -158,8 +158,8 @@ const Login = () => {
                 <div className="text-center  mt-4 pt-2">
                     <button className="btn-log" onClick={Validation}> Registrarse</button>
 
-                    <p className="small fw-bold mt-2 pt-1 mb-0">¿Tienes una cuenta?<p
-                        className="linkRegister" onClick={InitLogin}>Iniciar Sesion</p></p>
+                    <p className="small fw-bold mt-2 pt-1 mb-0">¿Tienes una cuenta?</p>
+                    <p className="linkRegister" onClick={InitLogin}>Iniciar Sesion</p>
                 </div>
 
                 </form>
@@ -167,7 +167,7 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user} providerId={4}/>}
+        { miLogin === true && <App user={user} providerId={4} userId={2}/>}
 
         </section>
     </div>

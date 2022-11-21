@@ -11,6 +11,8 @@ import {postProduct} from '../Post'
 function RestProducts(props) {
   const urlProducts = 'https://startproviders.uc.r.appspot.com/api/products'
   const [products, setProducts] = useState()
+  const [isOpen,setIsOpen] = useState(false)
+
   const [newProduct, setNewProduct] = useState({
     id: 0,
     name: "",
@@ -21,7 +23,6 @@ function RestProducts(props) {
     categoryName: "",
     urlImage: ""
   })
-  const [isOpen,setIsOpen] = useState(false)
 
   const peticionGet = async () => {
     await axios.get(urlProducts)
@@ -44,7 +45,7 @@ function RestProducts(props) {
 
   const handleSubmit = (event)=>{
       event.preventDefault()
-      if(newProduct.name === "" || newProduct.description === "" || newProduct.price === "" || newProduct.urlImage === ""){
+      if(newProduct.name === "" || newProduct.description === "" || newProduct.price === "" || newProduct.urlImage === "" || newProduct.categoryName === ""){
         alert("Faltan campos por llenar")
       }
       else{
@@ -108,11 +109,21 @@ function RestProducts(props) {
                 <Modal.Title>Agregar Producto</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <form id="addForm">
+                <form id="addForm" >
                     <p>Nombre del producto: <input type="text" onChange={handleInputChange} name="name" placeholder="" id='1d'/></p>
                     <p>Descripción: <input type="text" onChange={handleInputChange} name="description" placeholder="" id='2d'/></p>
                     <p>Precio: <input type="text" onChange={handleInputChange} name="price" placeholder="" id='3d'/></p>
-                    <p>Categoria: <input type="text" onChange={handleInputChange} name="categoryName" placeholder="" id='4d'/></p>      
+                    <p>Categoria: 
+                      <select id="4d" className='select-item' onChange={handleInputChange} name="categoryName">
+                        <option value=""></option>
+                        <option value="Alimentos">Alimentos</option>
+                        <option value="Cuidado Personal">Cuidado Personal</option>
+                        <option value="Cuidado del Hogar">Cuidado del Hogar</option>
+                        <option value="Tecnología">Tecnología</option> 
+                        <option value="Mecánica">Mecánica</option> 
+                        <option value="Carpintería">Carpintería</option> 
+                      </select>
+                    </p>      
                     <p>URL imagen: <input type="text" onChange={handleInputChange} name="urlImage" placeholder="" id='5d'/></p> 
                 </form>
             </Modal.Body>

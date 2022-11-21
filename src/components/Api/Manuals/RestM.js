@@ -5,7 +5,7 @@ import '../../../App.css';
 import '../../commons/Home/Home.css'
 
 function RestM() {
-    const urlManuals = 'https://private-894052-starproviders.apiary-mock.com/manuels'
+    const urlManuals = 'https://startproviders.uc.r.appspot.com/api/manuals'
     const [manuals, setManuals] = useState()
 
     useEffect(() => {
@@ -25,8 +25,8 @@ function RestM() {
             {
                 !manuals ? 'Cargando...' :
                 manuals.map((manual) => 
-                    <div className='slider-card-manual'>
-                        <Manual key={Manual.code} manual={manual} />
+                    <div className='slider-card-manual' key={manual.id}>
+                        <Manual  manual={manual} />
                     </div>
                 )
             }

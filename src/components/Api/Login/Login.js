@@ -112,7 +112,7 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user}/>}
+        { miLogin === true && <App user={user} providerId={4}/>}
 
         </section>        
         <section className="vh-100" id='SectionRegister'>
@@ -167,7 +167,7 @@ const Login = () => {
             </div>
         </div>
 
-        { miLogin === true && <App user={user}/>}
+        { miLogin === true && <App user={user} providerId={4}/>}
 
         </section>
     </div>

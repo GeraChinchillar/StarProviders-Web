@@ -4,27 +4,24 @@ import '../../../App.css';
 
 export const Providers = (props) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { product } = props
-  console.log({ product });
+  const { provider } = props
+  console.log({ provider });
 
   return (
     <div className='col-md-3 box-shadow oneProduct'>
-      <button className='card' class='productBox' variant="primary" onClick={() => setIsOpen(true)}>
-        <div className='card-body text-center text-wrap'>
-          <img src={product.url} width="40%" alt='Providers'></img>
-          <h6 className='card-title'>{product.name}</h6>
-          <p className="card-text">{product.description}</p>
-          <p className='card-text'>${product.price}</p>
-          <p className='card-text'>{product.provider}</p>
-          <p className='card-text'>{product.category}</p>
+      <button className='colorManual' variant="primary" onClick={() => setIsOpen(true)}>
+      <div className='card-body'>
+          <img src={provider.urlLogo} className='provider-img' alt='product'></img>
+          <h4 className='card-title-product'>{provider.name}</h4>
+          <p className='card-text-product'><b>Ubicación:</b> {provider.cityName}</p>
         </div>
       </button>
       <div>
-        <Modales open={isOpen} onClose={() => setIsOpen(false)} title={product.name} foot={<p className='card-text'>${product.price}</p>}>
-          <img class='card-img' src={product.url} alt='providers'/>
-          <p className="card-text">{product.description}</p>
-          <p className='card-text'>{product.provider}</p>
-          <p className='card-text'>{product.category}</p>
+        <Modales open={isOpen} onClose={() => setIsOpen(false)} title={provider.name}>
+          <img className='card-img provider-img' src={provider.urlLogo} alt='providers'/>
+          <a href={provider.site} target="_blank" className='provider-link'>Página de Walmart</a>
+          <a href={provider.urlLocation} target="_blank" className='provider-link'>Ubicación</a>
+          <p className='card-text-product'><b>Ubicación:</b> {provider.cityName}</p>
         </Modales>
       </div>
     </div>

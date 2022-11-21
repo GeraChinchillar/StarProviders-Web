@@ -18,8 +18,8 @@ function App(props) {
           <Route path="/login" element={<Login/>} />
           <Route path="/" element={<Home/>} />
           <Route path="/perfil" element={<Perfil/>} />
-          <Route path="/products" element={<RestProducts />} />
-          <Route path="/manuals" element={<RestManuals />} />
+          <Route path="/products" element={<RestProducts user = {props.user} providerId={props.providerId}/>} />
+          <Route path="/manuals" element={<RestManuals user = {props.user} providerId={props.providerId}/>} />
           <Route path="/providers" element={<RestProviders />} />
         </Routes>
         <Footer />

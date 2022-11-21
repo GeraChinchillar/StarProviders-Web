@@ -2,7 +2,7 @@
 
   .Manuals{
     align-items: center;
-    margin-left: 12%;
+    width: 95%;
   }
 
   .oneProduct{
@@ -34,6 +34,15 @@
     max-height: 275px;
     margin-top: 10px;
   }
+
+  .card-body-manual1{
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 275px;
+    max-height: 275px;
+    margin-right: 20px;
+  }
+
 
   .colorManual{
     background-color: #ffffff;

@@ -9,9 +9,9 @@ export const Manual = (props) => {
     const handleShow = () => setShow(true);
 
     return (
-        <div className='col-md-5 box-shadow oneManual '>
-            <button className='card colorManual' variant="primary" onClick={handleShow}>
-                <div className='card-body-manual text-center text-wrap'>
+        <div className='card-body-manual1 col-md-4 box-shadow oneManual'>
+            <button className='card-body-manual colorManual' variant="primary" onClick={handleShow}>
+                <div className=' text-center text-wrap'>
                     <h4 className='card-title-manual'>{manual.name}</h4>
                     <p className="card-text-autor">{manual.userName}</p>
                     <img src={manual.urlImage} className= 'manual-img' alt='manual'></img>

@@ -30,11 +30,11 @@ function RestProviders() {
         peticionGet1={peticionGet}
         providers1={providers}
         setProviders1={setProviders}
-        Title ={<h1 className="TitleProvider">Proveedores</h1>}
+        Title ={<h1 className="TitleProduct">Proveedores</h1>}
       />}
 
 
-      <div className='container d-flex justify-content-center align-items-center providers'>
+      <div className='container d-flex justify-content-center align-items-center products'>
         <div className='row'>
           {!providers ? 'Cargando...' :
             providers.map((provider) => <Providers key={provider.id} provider={provider} />)

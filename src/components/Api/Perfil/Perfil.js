@@ -8,8 +8,7 @@ function Perfil () {
                 <div className="row align-items-center flex-row-reverse">
                     <div className="col-lg-6 media1">
                         <div className="about-text go-to">
-                            <h3 className="dark-color">About Me</h3>
-                            <h6 className="theme-color lead">A Lead UX &amp; UI designer based in Canada</h6>
+                            <h3 className="dark-color">Gerardo Chinchilla</h3>
                             <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p>
                             <div className="row about-list">
                                 <div className="col-md-6">

@@ -121,7 +121,7 @@ function RestManuals(props) {
                 setManuals1={setManuals}
                 Title ={<h1 className="TitleProduct">Manuales</h1>}
             />
-            <div className='container d-flex justify-content-center align-items-center Manuals'>
+            <div className='container d-flex justify-content-center align-items-center products'>
                 <div className='row'>
                     {!manuals ? 'Cargando...' :
                         manuals.map((manual) => <Manual key={manual.id} manual={manual} />)

@@ -119,7 +119,7 @@ function RestManuals(props) {
                 peticionGet1={peticionGet}
                 Manuals1={manuals}
                 setManuals1={setManuals}
-                Title ={<h1 className="TitleProduct">Manuales</h1>}
+                Title ={<h1 className="TitleProduct">Guías</h1>}
             />
             <div className='container d-flex justify-content-center align-items-center products'>
                 <div className='row'>
@@ -138,11 +138,11 @@ function RestManuals(props) {
                 <div className='modales'>
                     <Modal className='addManual' show={isOpen} onHide={()=> setIsOpen(false)}>
                         <Modal.Header closeButton>
-                            <Modal.Title>Agregar Manual</Modal.Title>
+                            <Modal.Title>Agregar Guía</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             <form id="addForm">
-                                <p>Nombre del manual: <input type="text" onChange={handleInputChange} name="name" placeholder="" id='1d'/></p>
+                                <p>Nombre: <input type="text" onChange={handleInputChange} name="name" placeholder="" id='1d'/></p>
                                 <p>Descripción: <input type="text" onChange={handleInputChange} name="description" placeholder="" id='1d'/></p>
                                 <div className='steps'>
                                     <p>Productos:</p>

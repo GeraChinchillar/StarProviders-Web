@@ -15,11 +15,11 @@ export const Product = (props) => {
           <h5 className='card-title-product'>{product.name}</h5>
           <p className='card-text-product'><b>Proveedor:</b> {product.providerName}</p>
           <p className='card-text-product'><b>Categoria:</b>{product.categoryName}</p>
-          <p className='card-text-precio'> ${product.price.toFixed(2)}</p>
+          <p className='card-text-precio'> ${Number(product.price).toFixed(2)}</p>
         </div>
       </button>
       <div>
-        <Modales className='modal-product' open={isOpen} onClose={() => setIsOpen(false)} title={product.name} foot={<p className='modal-product-precio'><b>${product.price.toFixed(2)}</b></p>}>
+        <Modales className='modal-product' open={isOpen} onClose={() => setIsOpen(false)} title={product.name} foot={<p className='modal-product-precio'><b>${Number(product.price).toFixed(2)}</b></p>}>
           <img className='modal-product-img' src={product.urlImage} alt='product' />
           <p className='modal-product-text'> <b>Descripción:</b> {product.description}</p>
           <p className='modal-product-text'> <b>Proveedor:</b> {product.providerName}</p>

@@ -12,7 +12,7 @@ function Home(){
             <div className="home">
                 <ProductsSlider/>
             </div>
-            <Link  to="/manuals"> <h1 className="TitleProduct">Manuales</h1></Link>
+            <Link  to="/manuals"> <h1 className="TitleProduct">Guías</h1></Link>
             <div className="home">
                 <ManualsSlider/>
             </div>
